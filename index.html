@@ -1,0 +1,2917 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Guia Piano Pop — Toque suas músicas favoritas com fluidez | Bianca Ribeiro</title>
+<meta name="description" content="50 acompanhamentos prontos + masterclass em vídeo para você tocar suas músicas pop favoritas no piano com leveza, mesmo sem ler partitura. Acesso imediato e vitalício." />
+<meta property="og:title" content="Guia Piano Pop — 50 Acompanhamentos para Tocar a Música Pop" />
+<meta property="og:description" content="Toque suas músicas favoritas no piano com fluidez e emoção, mesmo se você ainda trava na hora de acompanhar." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FFFFFF;
+    --bg-alt:#FFF7F2;
+    --ink:#1A1A1A;
+    --ink-soft:#3D3A36;
+    --muted:#8A8278;
+    --line:#F2E8DD;
+    --accent:#EA814C;
+    --accent-dark:#D36B35;
+    --accent-soft:#FFC9A8;
+    --accent-deep:#B85423;
+    --white:#FFFFFF;
+    --shadow:0 1px 2px rgba(26,26,26,.04), 0 8px 24px rgba(26,26,26,.06);
+    --shadow-lg:0 4px 12px rgba(26,26,26,.08), 0 20px 60px rgba(26,26,26,.10);
+    --radius:8px;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.65;
+    font-size:17px;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+  h1,h2,h3,h4,.serif{
+    font-family:'Cormorant Garamond', Georgia, serif;
+    font-weight:500;
+    line-height:1.15;
+    letter-spacing:-.01em;
+    color:var(--ink);
+  }
+  h1{font-size:clamp(1.45rem, 2.8vw, 2.05rem); font-weight:600; line-height:1.22; letter-spacing:-.012em}
+  h2{font-size:clamp(1.8rem, 4vw, 2.6rem); font-weight:500}
+  h3{font-size:clamp(1.4rem, 3vw, 1.8rem); font-weight:500}
+  p{margin:0 0 1em}
+  a{color:inherit; text-decoration:none}
+  em, .italic{font-family:'Cormorant Garamond', Georgia, serif; font-style:italic; font-weight:500}
+
+  /* === TOP BAR === */
+  .topbar{
+    background:var(--ink);
+    color:#FFFFFF;
+    padding:12px 20px;
+    text-align:center;
+    font-size:13.5px;
+    font-weight:500;
+    letter-spacing:.02em;
+    position:sticky; top:0; z-index:50;
+  }
+  .topbar .pulse{display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--accent-soft); margin-right:8px; vertical-align:middle; animation:pulse 1.6s infinite ease-in-out}
+  @keyframes pulse{0%,100%{opacity:1; transform:scale(1)} 50%{opacity:.4; transform:scale(.8)}}
+  .topbar .timer{font-variant-numeric:tabular-nums; color:var(--accent-soft); font-weight:600; margin-left:6px}
+  .topbar .timer span{display:inline-block; min-width:1.6em; text-align:center}
+
+  /* === SECTION SHELL === */
+  section{padding:72px 24px; text-align:center}
+  .wrap{max-width:var(--maxw); margin:0 auto}
+  .wrap-wide{max-width:1040px; margin:0 auto}
+
+  /* Cabeçalho consistente em todas as seções */
+  section h2{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 18px;
+  }
+  section h2 + p,
+  section .lede{
+    text-align:center;
+    max-width:600px;
+    margin:0 auto 40px;
+    color:var(--ink-soft);
+    font-size:17px;
+    line-height:1.6;
+  }
+
+  .eyebrow{
+    display:block;
+    text-align:center;
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    color:var(--accent);
+    font-weight:600;
+    margin:0 auto 18px;
+    width:100%;
+  }
+  .eyebrow.dark{color:var(--ink); opacity:.6}
+
+  /* === HERO === */
+  .hero{
+    padding:48px 24px 56px;
+    text-align:left;
+    background:var(--bg);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-card{
+    background:#FBF6EF;
+    border-radius:28px;
+    padding:56px 56px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 1px 2px rgba(26,26,26,.03), 0 14px 40px rgba(234,129,76,.06);
+    border:1px solid rgba(234,129,76,.08);
+  }
+  .hero-card::before{
+    content:"";
+    position:absolute;
+    top:-25%; right:-15%;
+    width:55%; aspect-ratio:1;
+    background:radial-gradient(circle, rgba(234,129,76,.16), transparent 65%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .hero-card > *{position:relative; z-index:1}
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 1fr;
+    gap:48px;
+    align-items:center;
+  }
+  .hero-content{text-align:left}
+  .hero .eyebrow{
+    text-align:left;
+    margin:0 0 14px;
+    width:auto;
+  }
+  .hero h1{margin:0 0 14px; max-width:none}
+  .hero h1 .accent{color:var(--accent); font-style:italic}
+  .hero .lede{
+    text-align:left;
+    font-size:16.5px;
+    color:var(--ink-soft);
+    max-width:none;
+    margin:0 0 22px;
+    line-height:1.55;
+  }
+  .hero .lede strong{font-weight:600; color:var(--ink)}
+  .hero-bullets{
+    list-style:none;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-auto-rows:1fr;
+    gap:10px;
+    max-width:none;
+    margin:0;
+    padding:0;
+    background:transparent;
+    border:none;
+    border-radius:0;
+    text-align:left;
+    align-items:stretch;
+  }
+  .hero-bullets li{
+    background:var(--white);
+    border:1px solid rgba(234,129,76,.18);
+    border-radius:14px;
+    padding:16px 14px;
+    display:flex;
+    gap:10px;
+    align-items:center;
+    font-size:13.5px;
+    color:var(--ink);
+    line-height:1.35;
+    font-weight:500;
+    box-shadow:0 1px 2px rgba(26,26,26,.03);
+    transition:transform .2s ease, box-shadow .2s ease;
+    min-height:64px;
+  }
+  .hero-bullets li:hover{
+    transform:translateY(-2px);
+    box-shadow:0 4px 14px rgba(234,129,76,.10);
+  }
+  .hero-bullets li::before{content:none}
+  .hero-bullets .ico{
+    flex:0 0 28px;
+    width:28px; height:28px;
+    background:linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    border-radius:8px;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 2px 6px rgba(234,129,76,.25);
+  }
+  .hero-bullets .ico svg{
+    width:14px; height:14px;
+    stroke:#FFFFFF;
+    fill:none;
+    stroke-width:1.8;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+  .hero .micro{
+    font-size:13px;
+    color:var(--muted);
+    margin-top:16px;
+    letter-spacing:.02em;
+    text-align:left;
+  }
+  .hero .micro .shield{display:inline-block; margin-right:4px}
+  .hero-image{display:flex; justify-content:center; align-items:center}
+  .hero-image .img-slot{
+    margin:0;
+    max-width:none;
+    width:100%;
+  }
+
+  /* === BUTTON === */
+  .btn{
+    display:inline-block;
+    background:var(--accent);
+    color:#FFF;
+    padding:18px 36px;
+    border-radius:var(--radius);
+    font-weight:600;
+    font-size:15.5px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    border:none;
+    cursor:pointer;
+    transition:all .25s ease;
+    box-shadow:0 4px 12px rgba(234,129,76,.28);
+    position:relative;
+    overflow:hidden;
+  }
+  .btn:hover{
+    background:var(--accent-dark);
+    transform:translateY(-1px);
+    box-shadow:0 6px 18px rgba(234,129,76,.36);
+  }
+  .btn::after{
+    content:"→";
+    margin-left:10px;
+    display:inline-block;
+    transition:transform .25s ease;
+  }
+  .btn:hover::after{transform:translateX(4px)}
+  .btn-lg{padding:22px 44px; font-size:16px}
+  .btn-ghost{
+    background:transparent;
+    color:var(--ink);
+    border:1px solid var(--ink);
+    box-shadow:none;
+  }
+  .btn-ghost:hover{background:var(--ink); color:#FFF; box-shadow:none}
+
+  /* === DOR (cards em grade) === */
+  .dor{background:var(--bg-alt)}
+  .dor h2{margin:0 auto 40px; max-width:760px}
+  .dor h2 em{color:var(--accent); font-style:italic; font-weight:600}
+
+  .dor-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    max-width:1040px;
+    margin:0 auto;
+  }
+  .dor-card{
+    background:#FCEAD5;
+    border-radius:14px;
+    padding:18px 20px;
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    text-align:left;
+  }
+  .dor-card p{
+    margin:0;
+    font-size:14.5px;
+    color:var(--ink);
+    line-height:1.45;
+    font-weight:500;
+  }
+  .dor-card p strong{font-weight:700; color:var(--ink)}
+
+  .dor-card .ico{
+    flex:0 0 32px;
+    width:32px; height:32px;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    margin-top:1px;
+  }
+  .dor-card .ico.x{
+    background:#E64545;
+    border-radius:50%;
+    box-shadow:0 1px 3px rgba(230,69,69,.25);
+  }
+  .dor-card .ico.x svg{
+    width:14px; height:14px;
+    stroke:#FFFFFF;
+    stroke-width:2.6;
+    fill:none;
+    stroke-linecap:round;
+  }
+  .dor-card .ico.alert{
+    background:transparent;
+    width:36px; height:36px;
+    flex:0 0 36px;
+    margin-top:0;
+  }
+  .dor-card .ico.alert svg{
+    width:36px; height:36px;
+    display:block;
+    filter:drop-shadow(0 1px 2px rgba(245,184,0,.25));
+  }
+
+  .dor-card.special{
+    background:#FFF1C7;
+    border:1px solid rgba(245,184,0,.32);
+    align-items:center;
+  }
+  .dor-card.special p{color:#5A4500}
+  .dor-card.special p strong{color:#2E1E00; font-weight:700}
+
+  /* === VIRADA (2 colunas com pílulas) === */
+  .virada{background:var(--bg); padding-bottom:0; overflow:hidden}
+  .virada-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+    align-items:end;
+    max-width:1040px;
+    margin:0 auto;
+    text-align:left;
+  }
+  .virada-content{
+    text-align:left;
+    align-self:center;
+    padding-bottom:64px;
+  }
+  .virada-content .eyebrow{
+    text-align:left;
+    margin:0 0 14px;
+    width:auto;
+  }
+  .virada-content h2{
+    text-align:left;
+    max-width:none;
+    margin:0 0 22px;
+  }
+  .virada-content h2 em{color:var(--accent); font-style:italic}
+  .virada-content .intro{
+    text-align:left;
+    color:var(--ink-soft);
+    font-size:15.5px;
+    line-height:1.55;
+    margin:0 0 28px;
+    max-width:none;
+  }
+
+  .virada-pills{
+    list-style:none;
+    margin:0 0 28px;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .virada-pills li{
+    background:var(--ink);
+    color:#FFFFFF;
+    padding:16px 28px;
+    border-radius:100px;
+    font-size:14.5px;
+    line-height:1.4;
+    font-weight:500;
+    text-align:left;
+  }
+  .virada-pills li strong{font-weight:700; color:var(--accent-soft)}
+
+  .virada-closer{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    line-height:1.55;
+    margin:0;
+    max-width:none;
+    text-align:left;
+  }
+  .virada-closer strong{color:var(--ink); font-weight:700}
+
+  .virada-image{
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    align-self:end;
+    min-height:480px;
+  }
+  .virada-image img{
+    width:100%; max-width:580px;
+    height:auto;
+    display:block;
+    margin-bottom:0;
+    border-radius:0;
+  }
+  .virada-image .img-fallback{
+    display:flex;
+    flex-direction:column; align-items:center; justify-content:center;
+    width:100%; aspect-ratio:1/1.2;
+    max-width:380px;
+    border:1.5px dashed var(--accent);
+    border-radius:var(--radius);
+    padding:40px;
+    text-align:center;
+    background:var(--bg-alt);
+  }
+  .virada-image:not(.no-img) .img-fallback{display:none}
+  .virada-image.no-img img{display:none}
+  .virada-image .img-fallback svg{
+    width:36px; height:36px;
+    stroke:var(--accent);
+    fill:none;
+    stroke-width:1.4;
+    margin-bottom:14px;
+  }
+  .virada-image .img-fallback .lab{
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:8px;
+  }
+  .virada-image .img-fallback .hint{
+    font-size:12px;
+    color:var(--ink-soft);
+    line-height:1.5;
+    max-width:240px;
+  }
+  .virada-image .img-fallback code{
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size:11px;
+    background:var(--bg);
+    padding:2px 7px;
+    border-radius:4px;
+    color:var(--accent);
+    border:1px solid var(--line);
+  }
+
+  /* === PRODUTO === */
+  .produto{background:var(--bg-alt); text-align:center}
+  .produto .lede{
+    color:var(--ink-soft);
+    max-width:580px;
+    margin:0 auto 28px;
+    font-size:17px;
+  }
+  .produto .product-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:48px 36px;
+    margin:32px auto 0;
+    max-width:540px;
+    text-align:center;
+    box-shadow:var(--shadow);
+  }
+  .product-card .cover{
+    display:inline-block;
+    width:140px; height:180px;
+    background:linear-gradient(135deg, var(--ink) 0%, #2A2520 100%);
+    color:var(--accent-soft);
+    padding:24px 16px;
+    border-radius:4px;
+    box-shadow:0 12px 30px rgba(0,0,0,.18), 4px 4px 0 var(--accent);
+    margin-bottom:24px;
+    position:relative;
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+  }
+  .product-card .cover .small{
+    font-size:9px; letter-spacing:.3em; text-transform:uppercase; opacity:.7; margin-bottom:8px;
+    font-family:'Inter', sans-serif; font-weight:500;
+  }
+  .product-card .cover .title{
+    font-size:22px; font-weight:600; line-height:1.1; margin-bottom:6px; color:#FFF;
+  }
+  .product-card .cover .sub{
+    font-size:11px; opacity:.85; font-style:italic;
+  }
+  .product-card .cover::after{
+    content:"♪"; position:absolute; bottom:14px; left:50%; transform:translateX(-50%);
+    font-size:18px; color:var(--accent-soft); opacity:.6;
+  }
+  .product-card h3{margin-bottom:12px}
+  .product-card p{color:var(--ink-soft); font-size:15.5px; max-width:420px; margin:0 auto 8px}
+
+  /* === DENTRO === */
+  .dentro h2{text-align:center; margin-bottom:32px}
+  .dentro-list{
+    list-style:none;
+    max-width:600px;
+    margin:0 auto;
+    columns:1;
+  }
+  .dentro-list li{
+    padding:14px 0 14px 32px;
+    position:relative;
+    font-size:15.5px;
+    color:var(--ink-soft);
+    border-bottom:1px solid var(--line);
+    break-inside:avoid;
+  }
+  .dentro-list li:last-child{border-bottom:none}
+  .dentro-list li::before{
+    content:"♪";
+    position:absolute; left:0; top:14px;
+    color:var(--accent);
+    font-size:16px;
+  }
+  .dentro-list li strong{color:var(--ink); font-weight:600}
+
+  /* === REPERTÓRIO === */
+  .repertorio{background:var(--ink); color:#FFFFFF; text-align:center}
+  .repertorio .eyebrow{color:var(--accent-soft)}
+  .repertorio h2{color:#FFFFFF}
+  .repertorio h2 em{color:var(--accent-soft); font-style:italic}
+  .repertorio p{color:#D8D2C7; max-width:560px; margin-left:auto; margin-right:auto}
+  .songs{
+    margin-top:36px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:8px;
+    max-width:720px;
+    margin-left:auto; margin-right:auto;
+  }
+  .song{
+    border:1px solid rgba(245,239,230,.18);
+    color:#FFFFFF;
+    padding:8px 16px;
+    border-radius:100px;
+    font-size:13.5px;
+    font-weight:400;
+    letter-spacing:.01em;
+  }
+  .song em{color:var(--accent-soft); font-style:normal; opacity:.7; margin-left:4px; font-size:12px}
+
+  /* === PARA QUEM (cards verticais) === */
+  .paraquem h2{text-align:center; margin-bottom:14px}
+  .paraquem .lede{margin-bottom:44px}
+  .paraquem-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    max-width:1040px;
+    margin:0 auto;
+  }
+  .pq-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:32px 26px 28px;
+    text-align:center;
+    box-shadow:0 1px 2px rgba(26,26,26,.03), 0 4px 16px rgba(26,26,26,.04);
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:220px;
+  }
+  .pq-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 4px 12px rgba(26,26,26,.06), 0 14px 32px rgba(234,129,76,.10);
+    border-color:var(--accent-soft);
+  }
+  .pq-card .pq-icon{
+    width:48px; height:48px;
+    border-radius:12px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-soft);
+    display:flex; align-items:center; justify-content:center;
+    margin:0 auto 20px;
+    color:var(--accent);
+    flex:0 0 auto;
+  }
+  .pq-card .pq-icon svg{
+    width:24px; height:24px;
+    stroke:currentColor; fill:none;
+    stroke-width:1.6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+  .pq-card p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    line-height:1.55;
+    margin:0;
+  }
+  .pq-card p strong{color:var(--ink); font-weight:600}
+
+  /* === BIANCA AVATAR (foto circular com máscara) === */
+  .bianca-avatar{
+    width:170px; height:170px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:0 auto 24px;
+    background:linear-gradient(135deg, var(--accent-soft) 0%, var(--accent) 100%);
+    border:3px solid var(--white);
+    box-shadow:0 8px 24px rgba(234,129,76,.18), 0 2px 6px rgba(0,0,0,.08);
+    position:relative;
+    flex-shrink:0;
+  }
+  .bianca-avatar img{
+    position:absolute;
+    inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    z-index:2;
+  }
+  .bianca-avatar .bianca-fallback{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:#FFFFFF;
+    font-size:10.5px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    font-weight:600;
+    text-align:center;
+    padding:16px;
+    z-index:1;
+  }
+  .bianca-avatar.no-img .bianca-fallback{display:flex}
+  .bianca-avatar:not(.no-img) .bianca-fallback{display:none}
+  .bianca-avatar.no-img img{display:none}
+  .bianca-avatar .bianca-fallback svg{
+    width:34px; height:34px;
+    stroke:#FFFFFF;
+    fill:none;
+    stroke-width:1.4;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    margin-bottom:8px;
+  }
+
+  /* === AUTORA (caixa branca com 2 colunas) === */
+  .autora{background:var(--bg-alt); padding:64px 24px; text-align:center}
+  .autora .eyebrow{color:var(--accent); margin-bottom:30px}
+
+  .autora-card{
+    background:#FFFFFF;
+    border-radius:28px;
+    padding:48px;
+    max-width:1040px;
+    margin:0 auto;
+    box-shadow:0 1px 2px rgba(26,26,26,.03), 0 14px 40px rgba(26,26,26,.06);
+    border:1px solid var(--line);
+  }
+  .autora-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    position:relative;
+  }
+  .autora-grid::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:6%;
+    bottom:6%;
+    width:1px;
+    background:var(--line);
+  }
+  .autora-left{
+    text-align:center;
+    padding:12px 40px 12px 12px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  .autora-left .bianca-avatar{
+    margin:0 0 20px;
+    width:140px; height:140px;
+  }
+  .autora-name{
+    font-family:'Cormorant Garamond', serif;
+    font-size:24px;
+    font-weight:600;
+    margin:0 0 8px;
+    text-align:center;
+    line-height:1.2;
+    color:var(--ink);
+  }
+  .autora-role{
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    color:var(--muted);
+    margin-bottom:22px;
+    font-weight:500;
+  }
+  .autora-quote{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:16.5px;
+    color:var(--ink-soft);
+    line-height:1.5;
+    margin:0;
+    text-align:center;
+    max-width:none;
+  }
+  .autora-right{
+    text-align:left;
+    padding:12px 12px 12px 48px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .autora-sub{
+    display:block;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:20px;
+  }
+  .autora .credentials{
+    list-style:none;
+    max-width:none;
+    margin:0;
+    padding:0;
+    text-align:left;
+  }
+  .autora .credentials li{
+    padding:10px 0 10px 24px;
+    position:relative;
+    font-size:14.5px;
+    color:var(--ink);
+    line-height:1.5;
+  }
+  .autora .credentials li::before{
+    content:"";
+    position:absolute; left:0; top:18px;
+    width:10px; height:1.5px;
+    background:var(--accent);
+  }
+  .autora .credentials li strong{font-weight:600; color:var(--ink)}
+
+  /* === ANCORAGEM (stack list) === */
+  .ancoragem{
+    background:#FBF4EB;
+    text-align:left;
+  }
+  .ancoragem .wrap{max-width:640px; text-align:left}
+  .ancoragem .eyebrow{text-align:left; margin:0 0 18px; width:auto}
+  .ancoragem h2{text-align:left; margin:0 0 12px; max-width:none}
+  .ancoragem .sub{
+    text-align:left;
+    color:var(--ink-soft);
+    font-size:15.5px;
+    margin:0 0 36px;
+    max-width:none;
+  }
+  .ancoragem .sub em{color:var(--accent); font-style:italic; font-weight:600}
+
+  .stack{
+    background:transparent;
+    border:none;
+    overflow:visible;
+    margin-bottom:0;
+  }
+  .stack-item{
+    padding:18px 0;
+    border-bottom:1px solid rgba(184,84,35,.18);
+    text-align:left;
+  }
+  .stack-item:last-of-type{border-bottom:none}
+  .stack-item .row{
+    display:flex;
+    align-items:flex-end;
+    gap:8px;
+    width:100%;
+  }
+  .stack-item .name-title{
+    font-size:15.5px;
+    color:var(--ink);
+    font-weight:500;
+    line-height:1.3;
+    flex:0 1 auto;
+    text-align:left;
+  }
+  .stack-item .dots{
+    flex:1 1 auto;
+    height:14px;
+    align-self:flex-end;
+    background-image:radial-gradient(circle, rgba(184,84,35,.45) 1.1px, transparent 1.1px);
+    background-size:6px 6px;
+    background-position:left bottom 4px;
+    background-repeat:repeat-x;
+    min-width:24px;
+  }
+  .stack-item .price{
+    flex:0 0 auto;
+    font-family:'Cormorant Garamond', serif;
+    font-size:20px;
+    color:var(--ink-soft);
+    font-weight:500;
+    white-space:nowrap;
+    text-align:right;
+    text-decoration:line-through;
+    text-decoration-color:var(--accent);
+    text-decoration-thickness:1.8px;
+    text-decoration-skip-ink:none;
+  }
+  .stack-item small{
+    display:block;
+    margin-top:6px;
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.4;
+  }
+
+  .stack-total{
+    margin-top:8px;
+    padding:22px 0 0;
+    border-top:2px solid var(--ink);
+    display:flex; justify-content:space-between; align-items:flex-end;
+  }
+  .stack-total .name-title{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    color:var(--ink);
+    font-weight:700;
+    line-height:1.3;
+  }
+  .stack-total .name-title small{
+    display:block;
+    margin-top:4px;
+    text-transform:none;
+    letter-spacing:0;
+    color:var(--muted);
+    font-size:12.5px;
+    font-weight:400;
+  }
+  .stack-total .price{
+    font-family:'Cormorant Garamond', serif;
+    font-size:34px;
+    color:var(--ink);
+    font-weight:600;
+    line-height:1;
+    text-decoration:line-through;
+    text-decoration-color:var(--accent);
+    text-decoration-thickness:2.5px;
+    text-decoration-skip-ink:none;
+  }
+
+  /* === OFERTA (dark com 2 colunas) === */
+  .oferta{
+    background:var(--ink);
+    color:#FFFFFF;
+    text-align:left;
+    padding:80px 24px;
+  }
+  .oferta-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:64px;
+    align-items:center;
+    max-width:1080px;
+    margin:0 auto;
+  }
+  .oferta-image{
+    position:relative;
+    display:flex;
+    align-items:center; justify-content:center;
+    min-height:340px;
+  }
+  .oferta-image img{
+    max-width:100%; max-height:440px;
+    width:auto; height:auto;
+    display:block;
+    filter:
+      drop-shadow(0 0 60px rgba(255,201,168,.55))
+      drop-shadow(0 0 24px rgba(255,201,168,.40))
+      drop-shadow(0 18px 32px rgba(0,0,0,.30));
+    border-radius:6px;
+  }
+  .oferta-image .img-fallback{
+    display:flex;
+    flex-direction:column; align-items:center; justify-content:center;
+    width:100%; aspect-ratio:1.05;
+    max-width:380px;
+    border:1.5px dashed var(--accent-soft);
+    border-radius:var(--radius);
+    padding:40px;
+    text-align:center;
+  }
+  .oferta-image:not(.no-img) .img-fallback{display:none}
+  .oferta-image.no-img img{display:none}
+  .oferta-image .img-fallback svg{
+    width:36px; height:36px;
+    stroke:var(--accent-soft);
+    fill:none;
+    stroke-width:1.4;
+    margin-bottom:14px;
+  }
+  .oferta-image .img-fallback .lab{
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--accent-soft);
+    margin-bottom:8px;
+  }
+  .oferta-image .img-fallback .hint{
+    font-size:12px;
+    color:#D8D2C7;
+    line-height:1.5;
+    max-width:240px;
+  }
+  .oferta-image .img-fallback code{
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size:11px;
+    background:rgba(255,255,255,.08);
+    padding:2px 7px;
+    border-radius:4px;
+    color:var(--accent-soft);
+  }
+
+  .oferta-content{text-align:left}
+  .oferta-eyebrow{
+    display:block;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.22em;
+    color:var(--accent);
+    margin-bottom:8px;
+    text-transform:uppercase;
+    text-align:left;
+    width:auto;
+  }
+  .oferta-sub{
+    display:block;
+    font-size:11.5px;
+    font-weight:600;
+    letter-spacing:.20em;
+    color:#9A938A;
+    margin-bottom:36px;
+    text-transform:uppercase;
+  }
+  .oferta-price{margin-bottom:32px}
+  .oferta-price .big{
+    display:block;
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(38px, 5.5vw, 60px);
+    font-weight:600;
+    color:#FFFFFF;
+    line-height:1.05;
+    letter-spacing:-.02em;
+  }
+  .oferta-price .alt{
+    display:block;
+    font-size:20px;
+    color:#D8D2C7;
+    margin-top:6px;
+    font-weight:400;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+  }
+  .btn-cta{
+    display:inline-flex;
+    align-items:center;
+    background:var(--accent);
+    color:#FFFFFF;
+    padding:18px 40px;
+    border-radius:100px;
+    font-weight:600;
+    font-size:15.5px;
+    letter-spacing:.02em;
+    border:none;
+    cursor:pointer;
+    transition:transform .22s ease, box-shadow .22s ease, background .22s ease;
+    box-shadow:0 8px 22px rgba(234,129,76,.30);
+    text-decoration:none;
+  }
+  .btn-cta:hover{
+    background:var(--accent-dark);
+    transform:translateY(-2px);
+    box-shadow:0 12px 28px rgba(234,129,76,.42);
+  }
+  .btn-cta::after{
+    content:"→";
+    margin-left:10px;
+    transition:transform .22s ease;
+    display:inline-block;
+  }
+  .btn-cta:hover::after{transform:translateX(4px)}
+  .oferta-micro{
+    margin:18px 0 0;
+    font-size:13px;
+    color:#9A938A;
+    font-weight:400;
+    letter-spacing:.02em;
+  }
+
+  /* === GARANTIA (versão original) === */
+  .garantia{background:var(--bg-alt); text-align:center}
+  .garantia .seal{
+    width:140px; height:140px;
+    border:2px solid var(--accent);
+    border-radius:50%;
+    margin:0 auto 24px;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    background:var(--white);
+    box-shadow:var(--shadow);
+    position:relative;
+  }
+  .garantia .seal::before, .garantia .seal::after{
+    content:""; position:absolute;
+    width:130px; height:130px;
+    border:1px dashed var(--accent);
+    border-radius:50%;
+    opacity:.4;
+  }
+  .garantia .seal .num{
+    font-family:'Cormorant Garamond', serif;
+    font-size:42px;
+    color:var(--accent);
+    font-weight:600;
+    line-height:1;
+  }
+  .garantia .seal .label{
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    color:var(--ink-soft);
+    margin-top:4px;
+    font-weight:600;
+  }
+  .garantia h2{margin-bottom:16px}
+  .garantia h2 em{color:var(--accent); font-style:italic}
+  .garantia p{
+    max-width:540px;
+    margin:0 auto 12px;
+    color:var(--ink-soft);
+  }
+  .garantia .signoff{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:22px;
+    color:var(--ink);
+    margin-top:8px;
+  }
+
+  /* === CTA FINAL === */
+  .cta-final{background:var(--ink); color:#FFFFFF; text-align:center}
+  .cta-final .eyebrow{color:var(--accent-soft)}
+  .cta-final h2{color:#FFFFFF; margin-bottom:16px}
+  .cta-final h2 em{color:var(--accent-soft)}
+  .cta-final p{color:#D8D2C7; max-width:520px; margin:0 auto 28px}
+  .cta-final .btn{
+    background:#FFFFFF;
+    color:var(--ink);
+    box-shadow:0 4px 14px rgba(255,255,255,.12);
+  }
+  .cta-final .btn:hover{
+    background:var(--accent);
+    color:#FFFFFF;
+    box-shadow:0 6px 20px rgba(234,129,76,.40);
+  }
+  .cta-final .timer-mini{
+    margin-top:28px;
+    color:var(--accent-soft);
+    font-size:13px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+  }
+  .cta-final .timer-mini .timer span{display:inline-block; min-width:1.6em; text-align:center; font-weight:600; font-variant-numeric:tabular-nums}
+
+  /* === FAQ (2 colunas estilo pílulas) === */
+  .faq{background:var(--bg)}
+  .faq-grid{
+    display:grid;
+    grid-template-columns:1.25fr 1fr;
+    gap:64px;
+    align-items:center;
+    max-width:1080px;
+    margin:0 auto;
+    text-align:left;
+  }
+  .faq-list{
+    max-width:none;
+    margin:0;
+    text-align:left;
+    counter-reset:faq;
+  }
+  .faq-item{
+    background:var(--bg-alt);
+    border:none;
+    border-radius:60px;
+    margin-bottom:10px;
+    overflow:hidden;
+    transition:background .22s ease, border-radius .22s ease;
+    counter-increment:faq;
+  }
+  .faq-item.open{
+    border-radius:24px;
+    background:#FFEFE0;
+  }
+  .faq-q{
+    padding:18px 56px 18px 28px;
+    cursor:pointer;
+    position:relative;
+    font-family:'Inter', sans-serif;
+    font-size:14.5px;
+    font-weight:600;
+    color:var(--accent-deep);
+    line-height:1.4;
+    text-align:left;
+    transition:color .2s ease;
+  }
+  .faq-q::before{
+    content:counter(faq) ". ";
+    margin-right:4px;
+  }
+  .faq-q:hover{color:var(--accent)}
+  .faq-q::after{
+    content:"";
+    position:absolute;
+    right:26px; top:50%;
+    width:9px; height:9px;
+    border-right:2px solid var(--accent-deep);
+    border-bottom:2px solid var(--accent-deep);
+    transform:translateY(-70%) rotate(45deg);
+    transition:transform .25s ease;
+  }
+  .faq-item.open .faq-q::after{
+    transform:translateY(-30%) rotate(-135deg);
+  }
+  .faq-a{
+    max-height:0;
+    overflow:hidden;
+    padding:0 28px;
+    transition:max-height .35s ease, padding .35s ease;
+    color:var(--ink-soft);
+    font-size:14.5px;
+    line-height:1.65;
+    text-align:left;
+  }
+  .faq-a p{text-align:left; margin:0}
+  .faq-item.open .faq-a{
+    max-height:500px;
+    padding:0 28px 22px;
+  }
+
+  .faq-aside{
+    text-align:left;
+    position:relative;
+  }
+  .faq-aside h2{
+    font-family:'Inter', sans-serif;
+    font-size:clamp(28px, 4vw, 44px);
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.02em;
+    color:var(--accent-deep);
+    margin:0 0 20px;
+    line-height:1.05;
+    text-align:left;
+    max-width:none;
+  }
+  .faq-aside p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin:0 0 28px;
+    max-width:380px;
+    text-align:left;
+  }
+  .btn-contact{
+    display:inline-block;
+    background:transparent;
+    border:1.5px solid var(--accent-deep);
+    color:var(--ink);
+    padding:14px 32px;
+    border-radius:100px;
+    font-weight:600;
+    font-size:14px;
+    text-decoration:none;
+    transition:all .22s ease;
+    letter-spacing:.02em;
+  }
+  .btn-contact:hover{
+    background:var(--accent-deep);
+    color:#FFFFFF;
+  }
+
+  /* === PS (2 colunas) === */
+  .ps{
+    background:var(--bg);
+    border-top:1px solid var(--line);
+    text-align:left;
+  }
+  .ps-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:56px;
+    max-width:1040px;
+    margin:0 auto;
+    align-items:start;
+  }
+  .ps p{
+    text-align:left;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:17.5px;
+    line-height:1.55;
+    color:var(--ink-soft);
+    margin:0;
+  }
+  .ps p strong{
+    font-family:'Inter', sans-serif;
+    font-style:normal;
+    font-weight:600;
+    color:var(--ink);
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.15em;
+    margin-right:8px;
+  }
+  @media (max-width:760px){
+    .ps-grid{grid-template-columns:1fr; gap:24px}
+  }
+
+  /* === WHATSAPP === */
+  .wa{background:var(--bg-alt); text-align:center; padding:48px 24px}
+  .wa h3{margin-bottom:8px}
+  .wa p{color:var(--ink-soft); margin-bottom:18px; font-size:15.5px}
+  .wa-link{
+    display:inline-flex; align-items:center; gap:10px;
+    color:var(--accent);
+    font-weight:600;
+    font-size:14.5px;
+    letter-spacing:.04em;
+    border-bottom:1px solid var(--accent);
+    padding-bottom:2px;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .wa-link:hover{color:var(--accent-dark); border-color:var(--accent-dark)}
+  .wa-link svg{width:16px; height:16px}
+
+  /* === FOOTER === */
+  footer{
+    background:var(--ink);
+    color:#9A938A;
+    padding:32px 24px;
+    text-align:center;
+    font-size:13px;
+    letter-spacing:.02em;
+  }
+  footer .legal{margin-top:8px; font-size:11.5px; opacity:.7}
+
+  /* === SONGS CAROUSEL === */
+  .carousel-wrap{
+    position:relative;
+    margin:36px -24px 0;
+    padding:0 24px;
+  }
+  .carousel-controls{
+    display:flex; gap:8px;
+    margin-bottom:18px;
+    justify-content:flex-end;
+    padding-right:0;
+  }
+  .carousel-btn{
+    width:42px; height:42px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.22);
+    background:transparent;
+    color:#FFFFFF;
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer;
+    transition:all .22s ease;
+  }
+  .carousel-btn:hover{
+    background:var(--accent);
+    border-color:var(--accent);
+    transform:translateY(-1px);
+  }
+  .carousel-btn:active{transform:translateY(0)}
+  .carousel-btn svg{width:16px; height:16px; stroke:currentColor; fill:none}
+
+  .songs-carousel{
+    display:flex;
+    gap:16px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:x mandatory;
+    padding:8px 4px 28px;
+    scrollbar-width:thin;
+    scrollbar-color:var(--accent) rgba(255,255,255,.08);
+    -webkit-overflow-scrolling:touch;
+    scroll-behavior:smooth;
+  }
+  .songs-carousel::-webkit-scrollbar{height:6px}
+  .songs-carousel::-webkit-scrollbar-thumb{background:var(--accent); border-radius:3px}
+  .songs-carousel::-webkit-scrollbar-track{background:rgba(255,255,255,.06); border-radius:3px}
+
+  .song-card{
+    flex:0 0 200px;
+    scroll-snap-align:start;
+    background:var(--white);
+    border-radius:var(--radius);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform .28s ease, box-shadow .28s ease;
+  }
+  .song-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 16px 36px rgba(0,0,0,.35), 0 0 0 1px rgba(234,129,76,.35);
+  }
+  .song-card .cover{
+    aspect-ratio:1/1;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cormorant Garamond', serif;
+    font-size:84px;
+    font-weight:500;
+    line-height:1;
+    position:relative;
+    letter-spacing:-.04em;
+    text-transform:uppercase;
+    box-sizing:border-box;
+    overflow:hidden;
+  }
+  .song-card .cover img{
+    position:absolute;
+    inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    z-index:2;
+    display:block;
+  }
+  .song-card .cover::after{
+    content:"♪";
+    position:absolute; bottom:12px; right:14px;
+    font-size:18px; opacity:.55;
+    font-family:Arial, sans-serif;
+    letter-spacing:0;
+    text-transform:none;
+    font-weight:400;
+    z-index:3;
+    color:#FFF;
+    text-shadow:0 1px 4px rgba(0,0,0,.4);
+  }
+  /* gradiente discreto no topo da imagem para legibilidade do ♪ */
+  .song-card .cover:has(img)::before{
+    content:"";
+    position:absolute;
+    inset:auto 0 0 0;
+    height:40%;
+    background:linear-gradient(to top, rgba(0,0,0,.25), transparent);
+    z-index:2;
+    pointer-events:none;
+  }
+  .song-card:nth-child(5n+1) .cover{background:linear-gradient(135deg, #EA814C 0%, #D36B35 100%); color:#FFFFFF}
+  .song-card:nth-child(5n+2) .cover{background:linear-gradient(135deg, #1A1A1A 0%, #2E2A26 100%); color:#FFC9A8}
+  .song-card:nth-child(5n+3) .cover{background:linear-gradient(135deg, #FFC9A8 0%, #FFEEDF 100%); color:#B85423}
+  .song-card:nth-child(5n+4) .cover{background:linear-gradient(135deg, #B85423 0%, #8B3F1A 100%); color:#FFC9A8}
+  .song-card:nth-child(5n+5) .cover{background:#FFFFFF; color:#EA814C; box-shadow:inset 0 0 0 2px #EA814C}
+
+  /* Card "ver mais" */
+  a.song-card{text-decoration:none; color:inherit; cursor:pointer}
+  .song-card.more .cover{
+    background:linear-gradient(135deg, #2A2520 0%, #1A1A1A 100%) !important;
+    color:#FFFFFF !important;
+    box-shadow:inset 0 0 0 1px rgba(234,129,76,.4) !important;
+    flex-direction:column;
+    gap:4px;
+    padding:8px;
+    text-align:center;
+  }
+  .song-card.more .cover .num{
+    font-family:'Cormorant Garamond', serif;
+    font-size:74px;
+    line-height:1;
+    color:var(--accent);
+    font-weight:600;
+    letter-spacing:-.04em;
+  }
+  .song-card.more .cover .num small{
+    font-size:.45em;
+    color:var(--accent-soft);
+    margin-left:2px;
+    vertical-align:top;
+    font-weight:500;
+  }
+  .song-card.more .cover .label{
+    font-family:'Inter', sans-serif;
+    font-size:9.5px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.7);
+    font-weight:600;
+    margin-top:6px;
+  }
+  .song-card.more .cover::after{
+    content:"→";
+    font-family:'Inter', sans-serif;
+    font-size:14px;
+    bottom:14px; right:16px;
+    color:var(--accent);
+    text-shadow:none;
+    opacity:1;
+    z-index:3;
+  }
+  .song-card.more:hover .cover::after{transform:translateX(3px); transition:transform .25s ease}
+  .song-card.more .info{background:#FFFFFF}
+  .song-card.more .title{color:var(--ink)}
+  .song-card.more .artist{color:var(--accent); font-weight:600}
+
+  .song-card .info{
+    padding:16px 18px 20px;
+    flex:1;
+    display:flex; flex-direction:column;
+    background:#FFFFFF;
+  }
+  .song-card .title{
+    font-family:'Cormorant Garamond', serif;
+    font-size:18px;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.2;
+    margin-bottom:6px;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    min-height:2.4em;
+  }
+  .song-card .artist{
+    font-size:11.5px;
+    color:var(--muted);
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    line-height:1.3;
+    font-weight:500;
+  }
+
+  /* === IMAGE PLACEHOLDERS === */
+  .img-slot{
+    width:100%;
+    background:var(--bg-alt);
+    border:1.5px dashed var(--accent);
+    border-radius:var(--radius);
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    color:var(--accent);
+    text-align:center;
+    padding:32px 24px;
+    margin:0 auto;
+    transition:background .2s ease;
+    overflow:hidden;
+    position:relative;
+  }
+  .img-slot::before{
+    content:"";
+    position:absolute; inset:8px;
+    border:1px solid rgba(234,129,76,.15);
+    border-radius:4px;
+    pointer-events:none;
+  }
+  .img-slot svg{
+    width:36px; height:36px;
+    stroke:var(--accent);
+    margin-bottom:12px;
+    opacity:.85;
+  }
+  .img-slot .label{
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:6px;
+  }
+  .img-slot .desc{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    font-weight:400;
+    max-width:300px;
+    line-height:1.5;
+    letter-spacing:0;
+    text-transform:none;
+  }
+  .img-slot.dark{
+    background:#222;
+    border-color:var(--accent-soft);
+    color:var(--accent-soft);
+  }
+  .img-slot.dark svg{stroke:var(--accent-soft)}
+  .img-slot.dark .label{color:var(--accent-soft)}
+  .img-slot.dark .desc{color:#D8D2C7}
+  .img-slot.dark::before{border-color:rgba(255,201,168,.15)}
+  .img-slot.ratio-16x9{aspect-ratio:16/9}
+  .img-slot.ratio-4x3{aspect-ratio:4/3}
+  .img-slot.ratio-3x4{aspect-ratio:3/4}
+  .img-slot.ratio-1x1{aspect-ratio:1/1}
+
+  .img-slot.round{border-radius:50%; aspect-ratio:1/1; max-width:200px}
+
+  .img-pair{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    max-width:600px;
+    margin:32px auto 0;
+  }
+
+  /* === CARDS GRID (Tudo que você vai dominar) === */
+  .cards-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    max-width:1040px;
+    margin:0 auto;
+  }
+  .skill-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:28px 26px;
+    text-align:left;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    position:relative;
+  }
+  .skill-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 24px rgba(234,129,76,.12);
+    border-color:var(--accent-soft);
+  }
+  .skill-card .icon-wrap{
+    width:52px; height:52px;
+    border-radius:50%;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-soft);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:18px;
+    transition:background .25s ease;
+  }
+  .skill-card:hover .icon-wrap{background:#FFEEDF}
+  .skill-card .icon-wrap svg{
+    width:24px; height:24px;
+    stroke:var(--accent);
+    fill:none;
+    stroke-width:1.6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+  .skill-card h4{
+    font-family:'Cormorant Garamond', serif;
+    font-size:21px;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:8px;
+    line-height:1.2;
+  }
+  .skill-card p{
+    font-size:14.5px;
+    color:var(--ink-soft);
+    line-height:1.55;
+    margin:0;
+  }
+
+  /* === E-BOOK STAGE (hero image) === */
+  .ebook-stage{
+    position:relative;
+    width:100%;
+    max-width:460px;
+    margin:0 auto;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .ebook-stage > img{
+    width:100%; height:auto; display:block;
+    border-radius:6px;
+    filter:drop-shadow(0 30px 50px rgba(0,0,0,.18)) drop-shadow(0 14px 24px rgba(234,129,76,.15));
+  }
+  .ebook-stage .hero-mockup-fallback{
+    display:none;
+    flex-direction:column;
+    align-items:center; justify-content:center;
+    text-align:center;
+    width:100%; aspect-ratio:1/1.05;
+    background:var(--bg-alt);
+    border:1.5px dashed var(--accent);
+    border-radius:var(--radius);
+    padding:32px;
+  }
+  .ebook-stage.no-img .hero-mockup-fallback{display:flex}
+  .ebook-stage .hero-mockup-fallback svg{width:36px; height:36px; stroke:var(--accent); margin-bottom:14px; opacity:.85}
+  .ebook-stage .hero-mockup-fallback .lab{
+    font-size:13px; font-weight:600;
+    letter-spacing:.16em; text-transform:uppercase;
+    color:var(--accent); margin-bottom:8px;
+  }
+  .ebook-stage .hero-mockup-fallback .hint{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    font-weight:400;
+    line-height:1.5;
+    max-width:260px;
+  }
+  .ebook-stage .hero-mockup-fallback code{
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size:11.5px;
+    background:var(--white);
+    padding:1px 6px;
+    border-radius:4px;
+    border:1px solid var(--line);
+    color:var(--accent);
+  }
+  .ebook-stage .float-note{
+    position:absolute;
+    color:var(--accent);
+    opacity:.9;
+    pointer-events:none;
+    font-family:Arial, sans-serif;
+  }
+  .ebook-stage .float-note.n1{top:6%; right:4%; font-size:48px; transform:rotate(15deg); color:var(--accent-soft)}
+  .ebook-stage .float-note.n2{bottom:18%; left:0%; font-size:34px; transform:rotate(-10deg); opacity:.55}
+  .ebook-stage .float-note.n3{top:35%; right:-2%; font-size:26px; transform:rotate(-20deg); color:var(--accent); opacity:.7}
+  .ebook-stage .pulse-ring{
+    position:absolute; inset:14% 14% 14% 14%;
+    border:1px solid var(--accent-soft);
+    border-radius:50%;
+    opacity:.4;
+    animation:pulseRing 4s ease-in-out infinite;
+    pointer-events:none;
+  }
+  @keyframes pulseRing{0%,100%{transform:scale(1); opacity:.4} 50%{transform:scale(1.06); opacity:.15}}
+
+  /* === STATS BAR === */
+  .stats{
+    background:var(--bg);
+    padding:48px 24px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    text-align:center;
+  }
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:24px;
+    max-width:1040px;
+    margin:0 auto;
+  }
+  .stat{position:relative; padding:0 8px}
+  .stat + .stat{border-left:1px solid var(--line)}
+  .stat-num{
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(44px, 6vw, 64px);
+    font-weight:600;
+    color:var(--accent);
+    line-height:1;
+    letter-spacing:-.03em;
+    margin-bottom:10px;
+    display:block;
+  }
+  .stat-num small{font-size:.55em; color:var(--accent-dark); margin-left:2px}
+  .stat-label{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-weight:500;
+    line-height:1.4;
+    display:block;
+  }
+
+  /* === PULL QUOTE (citação Bianca em dobra dedicada) === */
+  .pullquote{
+    background:linear-gradient(180deg, var(--bg-alt) 0%, #F4ECDF 100%);
+    padding:64px 24px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .pullquote::before{
+    content:"♪";
+    position:absolute;
+    top:30px; left:8%;
+    font-size:110px;
+    color:var(--accent);
+    opacity:.07;
+    font-family:'Cormorant Garamond', serif;
+    line-height:1;
+    transform:rotate(-15deg);
+  }
+  .pullquote::after{
+    content:"♫";
+    position:absolute;
+    bottom:30px; right:8%;
+    font-size:120px;
+    color:var(--accent);
+    opacity:.06;
+    font-family:'Cormorant Garamond', serif;
+    line-height:1;
+    transform:rotate(12deg);
+  }
+  .pullquote > *{position:relative; z-index:2}
+
+  .pullquote .qmark{
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(70px, 8vw, 100px);
+    color:var(--accent);
+    line-height:.7;
+    margin-bottom:-6px;
+    font-weight:600;
+    opacity:.5;
+    display:block;
+  }
+  .pullquote .big-quote{
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(20px, 2.8vw, 28px);
+    line-height:1.35;
+    color:var(--ink);
+    max-width:680px;
+    margin:0 auto 22px;
+    font-weight:400;
+    letter-spacing:-.01em;
+  }
+  .pullquote .big-quote em{
+    color:var(--accent);
+    font-style:italic;
+    font-weight:500;
+  }
+  .pullquote .qby{
+    font-family:'Cormorant Garamond', serif;
+    font-size:16px;
+    color:var(--ink);
+    font-weight:500;
+    line-height:1.2;
+    display:block;
+    text-transform:none;
+    letter-spacing:0;
+  }
+  .pullquote .qby small{
+    display:block;
+    margin-top:6px;
+    font-family:'Inter', sans-serif;
+    font-size:10.5px;
+    letter-spacing:.18em;
+    color:var(--muted);
+    font-weight:600;
+    text-transform:uppercase;
+  }
+
+  /* === KEYBOARD VISUAL SECTION === */
+  .keyboard-section{
+    background:var(--bg);
+    padding:88px 24px;
+    text-align:center;
+    overflow:hidden;
+    position:relative;
+  }
+  .keyboard-section .sec-eyebrow{
+    display:block; text-align:center;
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:18px;
+  }
+  .keyboard-section h2{margin-bottom:18px}
+  .keyboard-section h2 em{color:var(--accent); font-style:italic}
+  .keyboard-section .lede{margin-bottom:48px}
+
+  .kb-stage{
+    max-width:720px;
+    margin:0 auto 32px;
+    position:relative;
+    padding:0 8px;
+  }
+  .kb-stage svg{width:100%; height:auto; display:block; filter:drop-shadow(0 14px 24px rgba(0,0,0,.10))}
+
+  .kb-callouts{
+    display:flex;
+    justify-content:center;
+    gap:32px;
+    flex-wrap:wrap;
+    max-width:600px;
+    margin:0 auto 28px;
+  }
+  .kb-callout{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .kb-callout-dot{
+    width:36px; height:36px;
+    background:var(--accent);
+    border-radius:50%;
+    color:#FFF;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Cormorant Garamond', serif;
+    font-size:18px;
+    font-weight:600;
+  }
+  .kb-callout-text{
+    text-align:left;
+    font-size:14px;
+    color:var(--ink-soft);
+    line-height:1.3;
+  }
+  .kb-callout-text strong{display:block; color:var(--ink); font-weight:600}
+
+  .kb-conclusion{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:22px;
+    color:var(--ink);
+    max-width:520px;
+    margin:0 auto;
+    line-height:1.4;
+  }
+  .kb-conclusion strong{color:var(--accent); font-style:normal; font-weight:600}
+
+  /* === PRODUTO ZIGZAG (imagem + checks) === */
+  .produto h2{max-width:680px; margin:0 auto 56px}
+  .produto-row{
+    display:grid;
+    grid-template-columns:0.85fr 1fr;
+    gap:56px;
+    align-items:center;
+    text-align:left;
+    margin:0 auto;
+    max-width:960px;
+  }
+  .produto-image{
+    position:relative;
+    display:flex;
+    align-items:center; justify-content:center;
+  }
+  .produto-image img{
+    max-width:280px; max-height:380px;
+    width:100%; height:auto;
+    display:block;
+    filter:drop-shadow(0 14px 30px rgba(0,0,0,.16));
+    border-radius:6px;
+    position:relative; z-index:2;
+  }
+  .produto-image .img-fallback{
+    display:flex;
+    flex-direction:column;
+    align-items:center; justify-content:center;
+    width:100%; aspect-ratio:3/4;
+    max-width:280px;
+    background:var(--white);
+    border:1.5px dashed var(--accent);
+    border-radius:var(--radius);
+    padding:28px;
+    text-align:center;
+  }
+  .produto-image:not(.no-img) .img-fallback{display:none}
+  .produto-image.no-img img{display:none}
+  .produto-image .img-fallback svg{
+    width:36px; height:36px;
+    stroke:var(--accent);
+    margin-bottom:14px;
+    opacity:.75;
+    fill:none;
+    stroke-width:1.4;
+  }
+  .produto-image .img-fallback .lab{
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:8px;
+  }
+  .produto-image .img-fallback .hint{
+    font-size:12px;
+    color:var(--ink-soft);
+    line-height:1.5;
+    max-width:240px;
+  }
+  .produto-image .img-fallback code{
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size:11px;
+    background:var(--bg);
+    padding:1px 6px;
+    border-radius:4px;
+    color:var(--accent);
+    border:1px solid var(--line);
+  }
+
+  .produto-checks{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:left;
+  }
+  .produto-checks li{
+    display:grid;
+    grid-template-columns:24px 1fr;
+    gap:14px;
+    align-items:start;
+    padding:11px 0;
+    font-size:16px;
+    color:var(--ink);
+    line-height:1.5;
+  }
+  .produto-checks .check{
+    width:24px; height:24px;
+    background:var(--accent);
+    border-radius:6px;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    margin-top:2px;
+  }
+  .produto-checks .check svg{
+    width:14px; height:14px;
+    stroke:#FFFFFF;
+    stroke-width:3;
+    fill:none;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+
+  .produto-divider{
+    height:1.5px;
+    background:linear-gradient(to right, transparent 0%, var(--accent) 25%, var(--accent) 75%, transparent 100%);
+    width:200px;
+    margin:72px auto;
+    opacity:.55;
+    border:none;
+  }
+
+  .produto .feature-row{margin:72px auto 0}
+
+  /* === FEATURE ROW (Produto: 3 cards horizontais) === */
+  .feature-row{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+    max-width:880px;
+    margin:36px auto 40px;
+  }
+  .feature-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:32px 24px;
+    text-align:center;
+    transition:transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+  .feature-card:hover{
+    transform:translateY(-3px);
+    border-color:var(--accent-soft);
+    box-shadow:0 10px 28px rgba(234,129,76,.14);
+  }
+  .feature-card .feat-icon{
+    width:60px; height:60px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    margin:0 auto 18px;
+    display:flex; align-items:center; justify-content:center;
+    color:#FFF;
+    box-shadow:0 6px 18px rgba(234,129,76,.30);
+  }
+  .feature-card .feat-icon svg{width:26px; height:26px; stroke:currentColor; fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round}
+  .feature-card h4{
+    font-family:'Cormorant Garamond', serif;
+    font-size:22px;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:8px;
+    line-height:1.2;
+  }
+  .feature-card p{
+    font-size:14px;
+    color:var(--ink-soft);
+    margin:0;
+    line-height:1.5;
+  }
+
+  /* === BENTO GRID OVERRIDE === */
+  .cards-grid.bento .skill-card.span-2{grid-column:span 2}
+  .cards-grid.bento .skill-card.feature{
+    background:linear-gradient(135deg, #FFF7F2 0%, #FFFFFF 100%);
+    border-color:var(--accent-soft);
+  }
+  .cards-grid.bento .skill-card.feature .icon-wrap{
+    background:var(--accent);
+    border-color:var(--accent);
+  }
+  .cards-grid.bento .skill-card.feature .icon-wrap svg{stroke:#FFF}
+
+  /* === DECORATIVE NOTES (flutuantes em seções) === */
+  .deco-note{
+    position:absolute;
+    color:var(--accent);
+    opacity:.08;
+    pointer-events:none;
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    z-index:0;
+  }
+  .deco-note.dn1{top:40px; left:5%; font-size:120px; transform:rotate(-18deg)}
+  .deco-note.dn2{bottom:60px; right:5%; font-size:140px; transform:rotate(12deg); opacity:.06}
+
+  /* === ANIMATIONS === */
+  .fade-up{opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease}
+  .fade-up.in{opacity:1; transform:translateY(0)}
+
+  /* === RESPONSIVE === */
+  @media (max-width: 920px){
+    .cards-grid{grid-template-columns:repeat(2, 1fr)}
+    .paraquem-grid{grid-template-columns:repeat(2, 1fr)}
+    .dor-grid{grid-template-columns:repeat(2, 1fr)}
+    .oferta-grid{grid-template-columns:1fr; gap:36px; text-align:center}
+    .oferta-content{text-align:center}
+    .oferta-eyebrow,.oferta-sub{text-align:center}
+    .oferta-image{order:-1}
+    .virada-grid{grid-template-columns:1fr; gap:36px; text-align:center}
+    .virada-content{text-align:center}
+    .virada-content .eyebrow{text-align:center; margin-left:auto; margin-right:auto}
+    .virada-content h2{text-align:center; margin-left:auto; margin-right:auto; max-width:600px}
+    .virada-content .intro{text-align:center; max-width:600px; margin-left:auto; margin-right:auto}
+    .virada-closer{text-align:center; max-width:600px; margin-left:auto; margin-right:auto}
+    .virada{padding-bottom:0}
+    .virada-content{padding-bottom:0}
+    .virada-image{order:-1; min-height:auto; align-self:auto; align-items:center; padding-top:24px}
+    .virada-image img{max-width:380px}
+    .autora-card{padding:32px 28px}
+    .autora-grid{grid-template-columns:1fr; gap:0}
+    .autora-grid::before{display:none}
+    .autora-left{padding:0 0 32px; border-bottom:1px solid var(--line)}
+    .autora-right{padding:32px 0 0}
+    .faq-grid{grid-template-columns:1fr; gap:32px}
+    .faq-aside{position:static; order:-1; text-align:left}
+    .faq-aside h2{text-align:left}
+    .faq-aside p{text-align:left}
+    .stats-grid{grid-template-columns:repeat(2, 1fr); gap:32px 16px}
+    .stat:nth-child(3){border-left:none}
+    .pullquote{padding:72px 24px}
+    .keyboard-section{padding:72px 24px}
+    .cards-grid.bento .skill-card.span-2{grid-column:span 1}
+    .hero-grid{
+      grid-template-columns:1fr;
+      gap:40px;
+      text-align:center;
+    }
+    .hero{text-align:center; padding:40px 16px 48px}
+    .hero-card{padding:40px 28px}
+    .hero-content{text-align:center}
+    .hero .eyebrow{text-align:center; margin:0 auto 14px}
+    .hero h1{margin-left:auto; margin-right:auto}
+    .hero .lede{text-align:center; max-width:600px; margin:0 auto 22px}
+    .hero-bullets{max-width:520px; margin:0 auto 0}
+    .hero-image{order:-1}
+    .hero-image .img-slot{max-width:520px}
+  }
+  @media (max-width: 600px){
+    body{font-size:16px}
+    section{padding:56px 20px}
+    .hero{padding:32px 14px 40px}
+    .hero-card{padding:32px 22px; border-radius:20px}
+    .hero-bullets{gap:8px}
+    .hero-bullets li{padding:12px; font-size:12.5px; gap:8px}
+    .hero-bullets .ico{flex:0 0 24px; width:24px; height:24px}
+    .hero-bullets .ico svg{width:12px; height:12px}
+    .stack-item{padding:14px 0}
+    .stack-item .name-title{font-size:14.5px}
+    .stack-item .price{font-size:18px}
+    .stack-item .dots{min-width:14px}
+    .stack-total{padding-top:18px}
+    .stack-total .price{font-size:28px}
+    .stack-total .name-title{font-size:12px; letter-spacing:.14em}
+    .ancoragem .wrap, .oferta .wrap{padding:0}
+    .price-card{padding:32px 20px}
+    .price-card .main-price{font-size:52px}
+    .product-card{padding:36px 24px}
+    .topbar{font-size:12px; padding:10px 12px}
+    .btn{padding:16px 28px; font-size:14.5px}
+    .btn-lg{padding:18px 32px; font-size:15px}
+    .faq-q{font-size:18px; padding:18px 30px 18px 0}
+    .cards-grid{grid-template-columns:1fr; gap:12px}
+    .skill-card{padding:24px 20px}
+    .skill-card h4{font-size:19px}
+    .img-pair{grid-template-columns:1fr; gap:12px}
+    .img-slot{padding:24px 18px}
+    .paraquem-grid{grid-template-columns:1fr; gap:12px}
+    .pq-card{min-height:auto; padding:24px 22px}
+    .dor-grid{grid-template-columns:1fr; gap:10px}
+    .produto-row{grid-template-columns:1fr; gap:32px; max-width:520px}
+    .produto-row.reverse .produto-image{order:-1}
+    .produto-divider{margin:48px auto}
+    .stats{padding:32px 20px}
+    .stats-grid{gap:24px 12px}
+    .stat + .stat{border-left:none}
+    .stat:nth-child(odd){border-right:1px solid var(--line)}
+    .pullquote{padding:64px 20px}
+    .pullquote::before, .pullquote::after{display:none}
+    .pullquote .qmark{font-size:96px}
+    .keyboard-section{padding:56px 20px}
+    .kb-callouts{gap:14px}
+    .song-card{flex:0 0 160px}
+    .song-card .cover{font-size:64px}
+    .song-card .title{font-size:16px}
+    .carousel-controls{display:none}
+    .carousel-wrap{margin:28px -20px 0; padding:0 20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span class="pulse"></span>
+  Oferta de lançamento — termina em
+  <span class="timer" aria-live="polite">
+    <span id="t-h">00</span>h <span id="t-m">00</span>m <span id="t-s">00</span>s
+  </span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap-wide">
+    <div class="hero-card">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow fade-up">Guia Piano Pop · Vol. 1</span>
+          <h1 class="fade-up">
+            Toque suas <em class="accent">músicas pop favoritas</em> no piano com fluidez — mesmo não sabendo ler cifras
+          </h1>
+          <p class="lede fade-up">
+            <strong>50 acompanhamentos prontos</strong> + masterclass em vídeo para você aprender a ler cifras e aplicar na próxima música. Sem partitura, sem teoria pesada, sem depender de tutoriais soltos.
+          </p>
+          <ul class="hero-bullets fade-up">
+            <li>
+              <span class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 18v-2M10 18v-6M16 18v-10M22 18v-14"/></svg>
+              </span>
+              50 padrões organizados por nível
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polygon points="7 4 20 12 7 20" fill="#FFFFFF" stroke="#FFFFFF"/></svg>
+              </span>
+              Masterclass demonstrando cada padrão
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M9 17V4l11-2v13"/><circle cx="6" cy="17" r="2.5" fill="#FFFFFF"/><circle cx="17" cy="15" r="2.5" fill="#FFFFFF"/></svg>
+              </span>
+              Beatles, Adele, Coldplay e muito mais
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+              </span>
+              Acesso imediato e vitalício
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-image fade-up">
+      <div class="ebook-stage">
+        <span class="float-note n1" aria-hidden="true">♪</span>
+        <span class="float-note n2" aria-hidden="true">♫</span>
+        <span class="float-note n3" aria-hidden="true">♬</span>
+        <div class="pulse-ring" aria-hidden="true"></div>
+        <img src="assets/hero-mockup.png" alt="Guia Piano Pop — mockup do e-book" class="hero-mockup-img" onerror="this.parentElement.classList.add('no-img'); this.style.display='none'"/>
+        <div class="hero-mockup-fallback">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          <span class="lab">Mockup do hero</span>
+          <span class="hint">Substitua salvando sua imagem em<br/><code>assets/hero-mockup.png</code></span>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat fade-up">
+      <span class="stat-num">30<small>+</small></span>
+      <span class="stat-label">Anos<br/>ensinando piano</span>
+    </div>
+    <div class="stat fade-up">
+      <span class="stat-num">50</span>
+      <span class="stat-label">Padrões de<br/>acompanhamento</span>
+    </div>
+    <div class="stat fade-up">
+      <span class="stat-num">USP</span>
+      <span class="stat-label">Doutorado<br/>em música</span>
+    </div>
+    <div class="stat fade-up">
+      <span class="stat-num">7</span>
+      <span class="stat-label">Dias de garantia<br/>incondicional</span>
+    </div>
+  </div>
+</section>
+
+<!-- DOR -->
+<section class="dor">
+  <div class="wrap-wide">
+    <span class="eyebrow fade-up dark">Antes da gente continuar</span>
+    <h2 class="fade-up">Você se reconhece em alguma dessas <em>situações</em>?</h2>
+
+    <div class="dor-grid">
+      <article class="dor-card fade-up">
+        <span class="ico x" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </span>
+        <p>Você toca uma melodia bonita com a mão direita, mas <strong>a esquerda fica parada</strong>, sem saber o que fazer.</p>
+      </article>
+
+      <article class="dor-card fade-up">
+        <span class="ico x" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </span>
+        <p>Quando aparece uma cifra, você até sabe o acorde — mas <strong>não sabe COMO tocar</strong> de um jeito que soe como pop de verdade.</p>
+      </article>
+
+      <article class="dor-card fade-up">
+        <span class="ico x" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </span>
+        <p>Você assiste tutoriais soltos, copia um pedaço, mas <strong>nunca consegue terminar</strong> a música inteira.</p>
+      </article>
+
+      <article class="dor-card fade-up">
+        <span class="ico x" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </span>
+        <p>Sente que falta "alguma coisa" no seu som. Não é peso. Não é técnica. <strong>É vida.</strong></p>
+      </article>
+
+      <article class="dor-card fade-up">
+        <span class="ico x" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </span>
+        <p>Já comprou método, já estudou clave de fá — e <strong>ainda não toca o pop</strong> com a leveza que ouve no Spotify.</p>
+      </article>
+
+      <article class="dor-card special fade-up">
+        <span class="ico alert" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.5 L22.2 21 L1.8 21 Z" fill="#F5B800" stroke="#D49500" stroke-width="0.6" stroke-linejoin="round"/>
+            <line x1="12" y1="9" x2="12" y2="14.5" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="12" cy="17.8" r="1.3" fill="#FFFFFF"/>
+          </svg>
+        </span>
+        <p><strong>Você não está sozinho.</strong> E o problema <strong>não é falta de talento.</strong></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- VIRADA -->
+<section class="virada">
+  <div class="virada-grid">
+    <div class="virada-content">
+      <span class="eyebrow fade-up">A virada</span>
+      <h2 class="fade-up">O problema é que ninguém te mostrou os <em>padrões</em></h2>
+      <p class="intro fade-up">
+        Toda música pop usa um número limitado de padrões — eles se repetem de "Let It Be" a "Shallow", de "Imagine" a "Cold Heart". E quando você os conhece, três coisas acontecem:
+      </p>
+
+      <ul class="virada-pills">
+        <li class="fade-up">Você pega qualquer cifra e <strong>sabe</strong> o que fazer com a mão esquerda</li>
+        <li class="fade-up">Você varia o acompanhamento dentro da mesma música<br/><strong>— refrão diferente da estrofe —</strong></li>
+        <li class="fade-up">Você toca com a sensação de <strong>"está soando como o original"</strong></li>
+      </ul>
+
+      <p class="virada-closer fade-up">
+        E é exatamente isso que o <strong>Guia Piano Pop</strong> entrega — a virada que transforma cifra em música de verdade.
+      </p>
+    </div>
+
+    <div class="virada-image fade-up">
+      <img src="assets/virada-image.png" alt="Bianca Ribeiro ao piano" onerror="this.parentElement.classList.add('no-img')"/>
+      <div class="img-fallback">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+        <span class="lab">Imagem da virada</span>
+        <span class="hint">Foto da Bianca ao piano ou em pose de autoridade.<br/>Salve em<br/><code>assets/virada-image.png</code></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE (citação Bianca) -->
+<section class="pullquote">
+  <span class="qmark fade-up">&ldquo;</span>
+  <p class="big-quote fade-up">
+    Tocar a partir das cifras pode parecer difícil — mas você vai se <em>apaixonar</em> quando começar a experimentar a liberdade de escolher como sua música soa.
+  </p>
+  <span class="qby fade-up">
+    Bianca Ribeiro
+    <small>Profa. Dra. em Música · USP</small>
+  </span>
+</section>
+
+<!-- PRODUTO -->
+<section class="produto">
+  <div class="wrap-wide">
+    <span class="eyebrow fade-up">O que tem dentro</span>
+    <h2 class="fade-up">Tudo o que você vai dominar</h2>
+    <p class="lede fade-up">12 frentes de estudo organizadas dos fundamentos aos padrões mais sofisticados — para você aplicar no piano de forma musical, prática e progressiva.</p>
+
+    <!-- BLOCO 1: imagem à esquerda, checks à direita -->
+    <div class="produto-row fade-up">
+      <div class="produto-image">
+        <img src="assets/ebook-page-01.png" alt="Página interna do e-book — Como montar um acorde" onerror="this.parentElement.classList.add('no-img')"/>
+        <div class="img-fallback">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+          <span class="lab">Página interna 01</span>
+          <span class="hint">Salve sua imagem em<br/><code>assets/ebook-page-01.png</code></span>
+        </div>
+      </div>
+      <ul class="produto-checks">
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Como ler cifras e identificar acordes em segundos</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Como montar qualquer acorde sem decoreba</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Lead Sheet: achar a partitura certa de qualquer música pop</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Fundamental e quinta — a base sólida do acompanhamento</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>O poder das oitavas para dar peso e emoção</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Padrões com movimento — arpejos que sustentam a melodia</li>
+      </ul>
+    </div>
+
+    <div class="produto-divider" aria-hidden="true"></div>
+
+    <!-- BLOCO 2: checks à esquerda, imagem à direita -->
+    <div class="produto-row reverse fade-up">
+      <ul class="produto-checks">
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Padrões abertos com a décima — som mais espacial e elegante</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Stride Piano — do ragtime ao pop moderno</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Padrões com peso para climas intensos e emocionais</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Acordes quebrados — harmonia leve, fluida e delicada</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>A síncope pop — o segredo do balanço que faz a cabeça mexer</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Repertório aplicado — 50+ músicas reais com o padrão ideal</li>
+      </ul>
+      <div class="produto-image">
+        <img src="assets/ebook-page-02.png" alt="Página interna do e-book — Acordes no teclado" onerror="this.parentElement.classList.add('no-img')"/>
+        <div class="img-fallback">
+          <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+          <span class="lab">Página interna 02</span>
+          <span class="hint">Salve sua imagem em<br/><code>assets/ebook-page-02.png</code></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 CARDS DE FEATURE (formato do produto) -->
+    <div class="feature-row fade-up">
+      <div class="feature-card">
+        <div class="feat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+        </div>
+        <h4>E-book em PDF</h4>
+        <p>26 páginas com 50 padrões organizados por nível de dificuldade</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
+        </div>
+        <h4>Masterclass em vídeo</h4>
+        <p>Demonstração prática de cada padrão aplicado em músicas reais</p>
+      </div>
+      <div class="feature-card">
+        <div class="feat-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+        </div>
+        <h4>Acesso vitalício</h4>
+        <p>Compra única. Estuda quando e onde quiser, em qualquer dispositivo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEYBOARD SECTION -->
+<section class="keyboard-section">
+  <span class="deco-note dn1" aria-hidden="true">♪</span>
+  <span class="deco-note dn2" aria-hidden="true">♫</span>
+  <div class="wrap-wide" style="position:relative; z-index:1">
+    <span class="sec-eyebrow fade-up">Como funciona, na prática</span>
+    <h2 class="fade-up">Quando você entende a cifra, <em>tudo muda</em></h2>
+    <p class="lede fade-up">Toda cifra esconde apenas 3 notas. Quando você sabe encontrá-las, qualquer música pop fica acessível — e o que parecia complicado vira simples.</p>
+
+    <div class="kb-stage fade-up">
+      <svg viewBox="0 0 480 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Teclado com acorde de Dó maior destacado">
+        <defs>
+          <linearGradient id="whiteKey" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="100%" stop-color="#F2ECE0"/>
+          </linearGradient>
+          <linearGradient id="blackKey" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#2D2A26"/>
+            <stop offset="100%" stop-color="#0D0B09"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Base sombra -->
+        <rect x="30" y="220" width="420" height="4" fill="#000" opacity="0.12" rx="2"/>
+
+        <!-- Teclas brancas -->
+        <g>
+          <rect x="30" y="20" width="60" height="200" rx="2" fill="url(#whiteKey)" stroke="#D4CDC1" stroke-width="0.8"/>
+          <rect x="90" y="20" width="60" height="200" rx="2" fill="url(#whiteKey)" stroke="#D4CDC1" stroke-width="0.8"/>
+          <rect x="150" y="20" width="60" height="200" rx="2" fill="url(#whiteKey)" stroke="#D4CDC1" stroke-width="0.8"/>
+          <rect x="210" y="20" width="60" height="200" rx="2" fill="url(#whiteKey)" stroke="#D4CDC1" stroke-width="0.8"/>
+          <rect x="270" y="20" width="60" height="200" rx="2" fill="url(#whiteKey)" stroke="#D4CDC1" stroke-width="0.8"/>
+          <rect x="330" y="20" width="60" height="200" rx="2" fill="url(#whiteKey)" stroke="#D4CDC1" stroke-width="0.8"/>
+          <rect x="390" y="20" width="60" height="200" rx="2" fill="url(#whiteKey)" stroke="#D4CDC1" stroke-width="0.8"/>
+        </g>
+
+        <!-- Highlight laranja nas teclas tocadas -->
+        <g>
+          <rect x="31" y="21" width="58" height="198" rx="2" fill="#EA814C" opacity="0.10"/>
+          <rect x="151" y="21" width="58" height="198" rx="2" fill="#EA814C" opacity="0.10"/>
+          <rect x="271" y="21" width="58" height="198" rx="2" fill="#EA814C" opacity="0.10"/>
+        </g>
+
+        <!-- Teclas pretas -->
+        <g>
+          <rect x="72" y="20" width="36" height="120" rx="2" fill="url(#blackKey)"/>
+          <rect x="132" y="20" width="36" height="120" rx="2" fill="url(#blackKey)"/>
+          <rect x="252" y="20" width="36" height="120" rx="2" fill="url(#blackKey)"/>
+          <rect x="312" y="20" width="36" height="120" rx="2" fill="url(#blackKey)"/>
+          <rect x="372" y="20" width="36" height="120" rx="2" fill="url(#blackKey)"/>
+        </g>
+
+        <!-- Linha conectando as 3 notas (decoração) -->
+        <path d="M 60 184 Q 180 168 300 184" stroke="#EA814C" stroke-width="1.5" fill="none" opacity="0.35" stroke-dasharray="3 4"/>
+
+        <!-- Marcadores das notas (Dó, Mi, Sol) -->
+        <g>
+          <circle cx="60" cy="184" r="17" fill="#EA814C" filter="drop-shadow(0 4px 8px rgba(234,129,76,0.4))"/>
+          <text x="60" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700">C</text>
+
+          <circle cx="180" cy="184" r="17" fill="#EA814C" filter="drop-shadow(0 4px 8px rgba(234,129,76,0.4))"/>
+          <text x="180" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700">E</text>
+
+          <circle cx="300" cy="184" r="17" fill="#EA814C" filter="drop-shadow(0 4px 8px rgba(234,129,76,0.4))"/>
+          <text x="300" y="190" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#FFFFFF" font-weight="700">G</text>
+        </g>
+
+        <!-- Label "Cifra C" no topo -->
+        <g>
+          <rect x="200" y="-2" width="80" height="22" rx="11" fill="#1A1A1A"/>
+          <text x="240" y="13" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="14" fill="#FFFFFF" font-style="italic" font-weight="500">cifra · C</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="kb-callouts fade-up">
+      <div class="kb-callout">
+        <span class="kb-callout-dot">C</span>
+        <span class="kb-callout-text"><strong>Dó</strong>fundamental</span>
+      </div>
+      <div class="kb-callout">
+        <span class="kb-callout-dot">E</span>
+        <span class="kb-callout-text"><strong>Mi</strong>terça maior</span>
+      </div>
+      <div class="kb-callout">
+        <span class="kb-callout-dot">G</span>
+        <span class="kb-callout-text"><strong>Sol</strong>quinta justa</span>
+      </div>
+    </div>
+
+    <p class="kb-conclusion fade-up">
+      É só isso. <strong>Três teclas formam um acorde.</strong><br/>
+      Multiplique por 12 cifras e você toca qualquer música pop.
+    </p>
+  </div>
+</section>
+
+<!-- REPERTÓRIO -->
+<section class="repertorio">
+  <div class="wrap-wide">
+    <span class="eyebrow fade-up">O repertório que você vai poder tocar</span>
+    <h2 class="fade-up">As músicas que você sempre quis tocar — agora ao seu <em>alcance</em></h2>
+    <p class="fade-up">Algumas das músicas trabalhadas como referência dentro do guia. <em>Arraste para o lado</em> ou use as setas:</p>
+
+    <div class="carousel-wrap fade-up">
+      <div class="carousel-controls">
+        <button class="carousel-btn" data-dir="prev" aria-label="Música anterior">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="carousel-btn" data-dir="next" aria-label="Próxima música">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+      <div class="songs-carousel" id="songsCarousel" tabindex="0" aria-label="Carrossel de músicas">
+        <article class="song-card"><div class="cover"><img src="assets/covers/let-it-be.jpg" alt="Let It Be — Beatles" onerror="this.style.display='none'"/>L</div><div class="info"><div class="title">Let It Be</div><div class="artist">Beatles</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/imagine.jpg" alt="Imagine — John Lennon" onerror="this.style.display='none'"/>I</div><div class="info"><div class="title">Imagine</div><div class="artist">John Lennon</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/shallow.jpg" alt="Shallow — Lady Gaga" onerror="this.style.display='none'"/>S</div><div class="info"><div class="title">Shallow</div><div class="artist">Lady Gaga</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/all-of-me.jpg" alt="All of Me — John Legend" onerror="this.style.display='none'"/>A</div><div class="info"><div class="title">All of Me</div><div class="artist">John Legend</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/yellow.jpg" alt="Yellow — Coldplay" onerror="this.style.display='none'"/>Y</div><div class="info"><div class="title">Yellow</div><div class="artist">Coldplay</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/clocks.jpg" alt="Clocks — Coldplay" onerror="this.style.display='none'"/>C</div><div class="info"><div class="title">Clocks</div><div class="artist">Coldplay</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/someone-like-you.jpg" alt="Someone Like You — Adele" onerror="this.style.display='none'"/>S</div><div class="info"><div class="title">Someone Like You</div><div class="artist">Adele</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/skyfall.jpg" alt="Skyfall — Adele" onerror="this.style.display='none'"/>S</div><div class="info"><div class="title">Skyfall</div><div class="artist">Adele</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/long-live.jpg" alt="Long Live — Taylor Swift" onerror="this.style.display='none'"/>L</div><div class="info"><div class="title">Long Live</div><div class="artist">Taylor Swift</div></div></article>
+        <a class="song-card more" href="#oferta" aria-label="Ver todos os 50 padrões no guia completo">
+          <div class="cover">
+            <span class="num">+40<small>›</small></span>
+            <span class="label">aplicações no guia</span>
+          </div>
+          <div class="info">
+            <div class="title">E muito mais</div>
+            <div class="artist">No guia completo</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="paraquem">
+  <div class="wrap-wide">
+    <span class="eyebrow fade-up">Pra quem foi feito</span>
+    <h2 class="fade-up">Esse guia é pra você se…</h2>
+
+    <div class="paraquem-grid">
+
+      <article class="pq-card fade-up">
+        <div class="pq-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M16 8a5 5 0 1 0 0 8"/><circle cx="9" cy="17" r="2.5"/><path d="M11.5 17V6"/></svg>
+        </div>
+        <p>Você toca piano ou teclado, mas <strong>ainda não entende cifras</strong> de forma simples e prática.</p>
+      </article>
+
+      <article class="pq-card fade-up">
+        <div class="pq-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.8"/><circle cx="12" cy="12" r=".8" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <p>Sempre tocou <strong>repertório clássico</strong> e quer experimentar o pop que escuta no dia a dia.</p>
+      </article>
+
+      <article class="pq-card fade-up">
+        <div class="pq-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M9 11V6a2 2 0 1 1 4 0v5"/><path d="M15 12V9a2 2 0 1 1 4 0v8a5 5 0 0 1-5 5h-3a4 4 0 0 1-4-4l-1-3a2 2 0 0 1 3-2.5l1 1.5"/></svg>
+        </div>
+        <p>Você toca <strong>de ouvido</strong> e não sabe o que fazer com a <strong>mão esquerda</strong>.</p>
+      </article>
+
+      <article class="pq-card fade-up">
+        <div class="pq-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M22 2 6 18"/><path d="M22 2 13 22l-2-9-9-2z"/></svg>
+        </div>
+        <p>Quer <strong>se libertar da partitura</strong> pronta e tocar a partir da cifra com liberdade.</p>
+      </article>
+
+      <article class="pq-card fade-up">
+        <div class="pq-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="11" x2="21" y2="11"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="3" y1="19" x2="21" y2="19"/><circle cx="14" cy="13" r="2.6" fill="currentColor" stroke="none"/><line x1="16.6" y1="13" x2="16.6" y2="4"/></svg>
+        </div>
+        <p>Tem <strong>dificuldade com a clave de fá</strong> e busca um caminho mais musical e direto.</p>
+      </article>
+
+      <article class="pq-card fade-up">
+        <div class="pq-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <p>Quer entender <strong>como escolher as notas certas</strong> pra que o acompanhamento soe como a versão original.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- AUTORA -->
+<section class="autora">
+  <div class="wrap-wide">
+    <span class="eyebrow fade-up">Quem te guia</span>
+
+    <div class="autora-card fade-up">
+      <div class="autora-grid">
+        <div class="autora-left">
+          <div class="bianca-avatar">
+            <img src="assets/bianca.jpg" alt="Bianca Ribeiro" onerror="this.parentElement.classList.add('no-img')"/>
+            <div class="bianca-fallback" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+              <span>Foto da Bianca</span>
+            </div>
+          </div>
+          <h3 class="autora-name">Profa. Dra. Bianca Ribeiro</h3>
+          <div class="autora-role">Pianista · Pesquisadora · Educadora</div>
+          <p class="autora-quote">"Meu foco é te ajudar a tocar a partir da cifra, mostrando caminhos alternativos para uma performance musical e prazerosa — desde o início."</p>
+        </div>
+
+        <div class="autora-right">
+          <span class="autora-sub">Sobre Bianca</span>
+          <ul class="credentials">
+            <li>Doutora em Teoria e Análise Musical pela <strong>USP</strong></li>
+            <li>Mais de <strong>30 anos</strong> ensinando piano</li>
+            <li>Especialista em ensino criativo para crianças, adolescentes e adultos</li>
+            <li>Criadora de materiais didáticos usados por professores em todo o Brasil</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANCORAGEM (valor real empilhado) -->
+<section class="ancoragem">
+  <div class="wrap">
+    <span class="eyebrow fade-up">Tudo que está incluso</span>
+    <h2 class="fade-up">O valor real do que você leva</h2>
+    <p class="sub fade-up">Some os itens abaixo e veja quanto este pacote <em>valeria</em> normalmente.</p>
+
+    <div class="stack fade-up">
+      <div class="stack-item">
+        <div class="row">
+          <span class="name-title">Guia Piano Pop em PDF</span>
+          <span class="dots" aria-hidden="true"></span>
+          <span class="price">R$ 197</span>
+        </div>
+        <small>50 padrões de acompanhamento organizados por nível</small>
+      </div>
+      <div class="stack-item">
+        <div class="row">
+          <span class="name-title">Masterclass em vídeo</span>
+          <span class="dots" aria-hidden="true"></span>
+          <span class="price">R$ 147</span>
+        </div>
+        <small>Demonstração prática de cada padrão aplicado em músicas reais</small>
+      </div>
+      <div class="stack-item">
+        <div class="row">
+          <span class="name-title">Sugestões de repertório pop</span>
+          <span class="dots" aria-hidden="true"></span>
+          <span class="price">R$ 47</span>
+        </div>
+        <small>Mais de 50 músicas reais com indicação do padrão ideal</small>
+      </div>
+      <div class="stack-item">
+        <div class="row">
+          <span class="name-title">Suporte direto via WhatsApp</span>
+          <span class="dots" aria-hidden="true"></span>
+          <span class="price">R$ 67</span>
+        </div>
+        <small>Tire dúvidas com nossa equipe enquanto estuda</small>
+      </div>
+      <div class="stack-item">
+        <div class="row">
+          <span class="name-title">Atualizações vitalícias</span>
+          <span class="dots" aria-hidden="true"></span>
+          <span class="price">R$ 47</span>
+        </div>
+        <small>Toda nova versão do material entra direto no seu acesso</small>
+      </div>
+
+      <div class="stack-total">
+        <span class="name-title">
+          Valor total
+          <small>somando os itens acima</small>
+        </span>
+        <span class="price">R$ 505</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA (dark com 2 colunas) -->
+<section class="oferta" id="oferta">
+  <div class="oferta-grid">
+    <div class="oferta-image fade-up">
+      <img src="assets/oferta-mockup.png" alt="Guia Piano Pop — pacote completo" onerror="this.parentElement.classList.add('no-img')"/>
+      <div class="img-fallback">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        <span class="lab">Mockup do produto</span>
+        <span class="hint">Salve em<br/><code>assets/oferta-mockup.png</code></span>
+      </div>
+    </div>
+
+    <div class="oferta-content fade-up">
+      <span class="oferta-eyebrow">Acesso vitalício</span>
+      <span class="oferta-sub">Você só paga uma vez esse valor</span>
+
+      <div class="oferta-price">
+        <span class="big">12x de R$ 6,70</span>
+        <span class="alt">ou R$ 67,00 à vista</span>
+      </div>
+
+      <a class="btn-cta" href="https://pay.hotmart.com/S103746459U?bid=1771461793760">Sim, quero meu Guia</a>
+
+      <p class="oferta-micro">Condição especial por tempo limitado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="garantia">
+  <div class="wrap">
+    <div class="seal fade-up">
+      <span class="num">7</span>
+      <span class="label">Dias</span>
+    </div>
+    <span class="eyebrow fade-up">Garantia incondicional</span>
+    <h2 class="fade-up">O risco é todo <em>nosso</em></h2>
+    <p class="fade-up">
+      Compre hoje, baixe o guia, assista a masterclass, teste os padrões nas suas músicas favoritas. Se em até 7 dias você sentir que não é pra você — por <strong>qualquer motivo</strong> — devolvemos 100% do valor.
+    </p>
+    <p class="fade-up"><strong>Sem perguntas. Sem enrolação. Sem burocracia.</strong></p>
+    <p class="signoff fade-up">Você só corre o risco de tocar bem.</p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="wrap">
+    <span class="eyebrow fade-up">Última chamada</span>
+    <h2 class="fade-up">Toque a primeira música <em>essa semana</em></h2>
+    <p class="fade-up">A oferta de lançamento por R$ 67 termina em breve. Depois disso, o guia volta ao preço cheio de R$ 297.</p>
+    <a class="btn btn-lg fade-up" href="#oferta">Quero o Guia por R$ 67</a>
+    <div class="timer-mini fade-up">
+      Termina em
+      <span class="timer">
+        <span id="t-h2">00</span>h <span id="t-m2">00</span>m <span id="t-s2">00</span>s
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-grid">
+    <div class="faq-list">
+      <div class="faq-item fade-up">
+        <div class="faq-q">O guia é em vídeo ou em PDF?</div>
+        <div class="faq-a"><p>Os dois. Você recebe um e-book em PDF com os 50 padrões escritos (escrita tradicional + ilustração no teclado) e uma masterclass em vídeo demonstrando cada padrão aplicado em músicas reais.</p></div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q">Tenho que pagar mensalidade?</div>
+        <div class="faq-a"><p>Não. É <strong>compra única</strong>. Você paga R$ 67 uma vez e tem acesso vitalício ao material, incluindo atualizações futuras.</p></div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q">Funciona pra quem nunca leu partitura?</div>
+        <div class="faq-a"><p>Sim. O guia foi pensado para quem toca a partir da cifra. Tem a escrita tradicional para quem quiser, mas o foco é justamente fugir da partitura completa e aprender a acompanhar lendo cifra.</p></div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q">Sou iniciante. Vou conseguir aplicar?</div>
+        <div class="faq-a"><p>Sim. Os padrões são organizados <strong>por nível de dificuldade</strong>, do mais simples ao mais avançado. Os primeiros são pensados para quem está começando — você evolui no seu ritmo.</p></div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q">Preciso ter um piano caro?</div>
+        <div class="faq-a"><p>Não. Funciona em piano acústico, piano digital ou teclado. Tudo que você precisa é de um instrumento e disposição para experimentar.</p></div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q">Posso acessar pelo celular?</div>
+        <div class="faq-a"><p>Sim. PDF e vídeo abrem em qualquer dispositivo — celular, tablet, computador.</p></div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q">Recebo tudo na hora?</div>
+        <div class="faq-a"><p>Sim. Acesso liberado <strong>imediatamente</strong> após a confirmação do pagamento (Pix em segundos, cartão na hora).</p></div>
+      </div>
+      <div class="faq-item fade-up">
+        <div class="faq-q">E se eu não gostar?</div>
+        <div class="faq-a"><p>Você tem <strong>7 dias</strong> para testar e pedir o reembolso integral, sem perguntas e sem burocracia. O risco é todo nosso.</p></div>
+      </div>
+    </div>
+
+    <aside class="faq-aside fade-up">
+      <h2>Perguntas Frequentes</h2>
+      <p>Ficou com alguma dúvida? Confira as respostas para as perguntas frequentes ou entre em contato direto pelo botão abaixo:</p>
+      <a class="btn-contact" href="https://wa.link/adtgkg" target="_blank" rel="noopener">Entrar em contato</a>
+    </aside>
+  </div>
+</section>
+
+<!-- PS -->
+<section class="ps">
+  <div class="ps-grid">
+    <p class="fade-up"><strong>P.S.</strong> Se você ainda está em dúvida, lembra disso: você não está investindo R$ 67 em um PDF. Você está investindo num atalho de anos. Em 30 minutos com o guia em mãos, você já consegue aplicar o primeiro padrão numa música que ama. E quando isso acontece, o aprendizado deixa de ser estudo — e vira prazer.</p>
+    <p class="fade-up"><strong>P.P.S.</strong> A garantia é incondicional. Se não servir, você pede o reembolso e volta pra estaca zero — sem perder um real. O risco real é não testar.</p>
+  </div>
+</section>
+
+<!-- WHATSAPP -->
+<section class="wa">
+  <div class="wrap">
+    <h3 class="fade-up">Ainda com alguma dúvida?</h3>
+    <p class="fade-up">Nossa equipe está disponível para te ajudar antes da compra.</p>
+    <a class="wa-link fade-up" href="https://wa.link/adtgkg" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+      Falar no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>Copyright © Bianca Ribeiro · Todos os direitos reservados</div>
+  <div class="legal">Este site não é afiliado à Hotmart, Meta, Google ou qualquer outra plataforma. Resultados podem variar conforme dedicação individual.</div>
+</footer>
+
+<script>
+  // === COUNTDOWN ===
+  // Marca um deadline de 24h a partir da primeira visita (com fallback)
+  (function(){
+    var KEY = 'gpp_deadline_v1';
+    var deadline;
+    try{
+      var saved = localStorage.getItem(KEY);
+      if(saved){
+        deadline = parseInt(saved, 10);
+        // Se já passou, reseta com novas 24h
+        if(isNaN(deadline) || deadline - Date.now() < 0){
+          deadline = Date.now() + 24*60*60*1000;
+          localStorage.setItem(KEY, deadline);
+        }
+      } else {
+        deadline = Date.now() + 24*60*60*1000;
+        localStorage.setItem(KEY, deadline);
+      }
+    } catch(e){
+      deadline = Date.now() + 24*60*60*1000;
+    }
+
+    function pad(n){ n = Math.max(0, n); return n < 10 ? '0'+n : ''+n; }
+    function tick(){
+      var diff = deadline - Date.now();
+      if(diff < 0) diff = 0;
+      var h = Math.floor(diff / (1000*60*60));
+      var m = Math.floor((diff % (1000*60*60)) / (1000*60));
+      var s = Math.floor((diff % (1000*60)) / 1000);
+      ['t-h','t-m','t-s','t-h2','t-m2','t-s2'].forEach(function(id){
+        var el = document.getElementById(id);
+        if(!el) return;
+        if(id.indexOf('h') > -1) el.textContent = pad(h);
+        else if(id.indexOf('m') > -1) el.textContent = pad(m);
+        else el.textContent = pad(s);
+      });
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+  // === SONGS CAROUSEL ===
+  (function(){
+    var carousel = document.getElementById('songsCarousel');
+    if(!carousel) return;
+    var step = 220; // largura do card (200) + gap (16) ~ 220
+    document.querySelectorAll('.carousel-btn').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var dir = btn.getAttribute('data-dir');
+        var card = carousel.querySelector('.song-card');
+        if(card){
+          var w = card.getBoundingClientRect().width;
+          step = w + 16;
+        }
+        carousel.scrollBy({ left: dir === 'next' ? step : -step, behavior: 'smooth' });
+      });
+    });
+    // navegação por teclado quando o carrossel está focado
+    carousel.addEventListener('keydown', function(e){
+      if(e.key === 'ArrowRight'){ e.preventDefault(); carousel.scrollBy({left:step, behavior:'smooth'}); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); carousel.scrollBy({left:-step, behavior:'smooth'}); }
+    });
+  })();
+
+  // === FAQ ACCORDION ===
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = q.parentElement;
+      var isOpen = item.classList.contains('open');
+      // Fecha todos
+      document.querySelectorAll('.faq-item.open').forEach(function(el){ el.classList.remove('open'); });
+      // Abre se não estava aberto
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+
+  // === FADE UP ON SCROLL ===
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-up').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.fade-up').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
