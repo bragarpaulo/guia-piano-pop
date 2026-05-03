@@ -2052,6 +2052,40 @@
     .produto-row{grid-template-columns:1fr; gap:32px; max-width:520px}
     .produto-row.reverse .produto-image{order:-1}
     .produto-divider{margin:48px auto}
+    .feature-row{grid-template-columns:1fr; gap:10px; max-width:520px; margin:32px auto}
+    .feature-card{
+      display:grid;
+      grid-template-columns:48px 1fr;
+      grid-template-rows:auto auto;
+      gap:2px 14px;
+      align-items:center;
+      text-align:left;
+      padding:18px 20px;
+    }
+    .feature-card .feat-icon{
+      grid-row:1/3;
+      grid-column:1;
+      align-self:center;
+      width:48px; height:48px;
+      margin:0;
+    }
+    .feature-card .feat-icon svg{width:22px; height:22px}
+    .feature-card h4{
+      grid-column:2;
+      grid-row:1;
+      align-self:end;
+      margin:0;
+      font-size:17px;
+      line-height:1.2;
+    }
+    .feature-card p{
+      grid-column:2;
+      grid-row:2;
+      align-self:start;
+      font-size:13.5px;
+      line-height:1.45;
+      margin:0;
+    }
     .stats{padding:32px 20px}
     .stats-grid{gap:24px 12px}
     .stat + .stat{border-left:none}
