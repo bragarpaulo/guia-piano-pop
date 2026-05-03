@@ -9,7 +9,9 @@
 <meta property="og:description" content="Toque suas músicas favoritas no piano com fluidez e emoção, mesmo se você ainda trava na hora de acompanhar." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <style>
   :root{
     --bg:#FFFFFF;
@@ -462,71 +464,6 @@
     margin:0 auto 28px;
     font-size:17px;
   }
-  .produto .product-card{
-    background:var(--white);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:48px 36px;
-    margin:32px auto 0;
-    max-width:540px;
-    text-align:center;
-    box-shadow:var(--shadow);
-  }
-  .product-card .cover{
-    display:inline-block;
-    width:140px; height:180px;
-    background:linear-gradient(135deg, var(--ink) 0%, #2A2520 100%);
-    color:var(--accent-soft);
-    padding:24px 16px;
-    border-radius:4px;
-    box-shadow:0 12px 30px rgba(0,0,0,.18), 4px 4px 0 var(--accent);
-    margin-bottom:24px;
-    position:relative;
-    text-align:center;
-    font-family:'Cormorant Garamond', serif;
-  }
-  .product-card .cover .small{
-    font-size:9px; letter-spacing:.3em; text-transform:uppercase; opacity:.7; margin-bottom:8px;
-    font-family:'Inter', sans-serif; font-weight:500;
-  }
-  .product-card .cover .title{
-    font-size:22px; font-weight:600; line-height:1.1; margin-bottom:6px; color:#FFF;
-  }
-  .product-card .cover .sub{
-    font-size:11px; opacity:.85; font-style:italic;
-  }
-  .product-card .cover::after{
-    content:"♪"; position:absolute; bottom:14px; left:50%; transform:translateX(-50%);
-    font-size:18px; color:var(--accent-soft); opacity:.6;
-  }
-  .product-card h3{margin-bottom:12px}
-  .product-card p{color:var(--ink-soft); font-size:15.5px; max-width:420px; margin:0 auto 8px}
-
-  /* === DENTRO === */
-  .dentro h2{text-align:center; margin-bottom:32px}
-  .dentro-list{
-    list-style:none;
-    max-width:600px;
-    margin:0 auto;
-    columns:1;
-  }
-  .dentro-list li{
-    padding:14px 0 14px 32px;
-    position:relative;
-    font-size:15.5px;
-    color:var(--ink-soft);
-    border-bottom:1px solid var(--line);
-    break-inside:avoid;
-  }
-  .dentro-list li:last-child{border-bottom:none}
-  .dentro-list li::before{
-    content:"♪";
-    position:absolute; left:0; top:14px;
-    color:var(--accent);
-    font-size:16px;
-  }
-  .dentro-list li strong{color:var(--ink); font-weight:600}
-
   /* === REPERTÓRIO === */
   .repertorio{background:var(--ink); color:#FFFFFF; text-align:center}
   .repertorio .eyebrow{color:var(--accent-soft)}
@@ -2190,7 +2127,7 @@
         <span class="float-note n2" aria-hidden="true">♫</span>
         <span class="float-note n3" aria-hidden="true">♬</span>
         <div class="pulse-ring" aria-hidden="true"></div>
-        <img src="assets/hero-mockup.png" alt="Guia Piano Pop — mockup do e-book" class="hero-mockup-img" onerror="this.parentElement.classList.add('no-img'); this.style.display='none'"/>
+        <img src="assets/hero-mockup.png" alt="Guia Piano Pop — mockup do e-book" class="hero-mockup-img" width="460" height="500" decoding="async" fetchpriority="high" onerror="this.parentElement.classList.add('no-img'); this.style.display='none'"/>
         <div class="hero-mockup-fallback">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
           <span class="lab">Mockup do hero</span>
@@ -2303,7 +2240,7 @@
     </div>
 
     <div class="virada-image fade-up">
-      <img src="assets/virada-image.png" alt="Bianca Ribeiro ao piano" onerror="this.parentElement.classList.add('no-img')"/>
+      <img src="assets/virada-image.png" alt="Bianca Ribeiro ao piano" width="580" height="700" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')"/>
       <div class="img-fallback">
         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
         <span class="lab">Imagem da virada</span>
@@ -2335,7 +2272,7 @@
     <!-- BLOCO 1: imagem à esquerda, checks à direita -->
     <div class="produto-row fade-up">
       <div class="produto-image">
-        <img src="assets/ebook-page-01.png" alt="Página interna do e-book — Como montar um acorde" onerror="this.parentElement.classList.add('no-img')"/>
+        <img src="assets/ebook-page-01.png" alt="Página interna do e-book — Como montar um acorde" width="280" height="380" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')"/>
         <div class="img-fallback">
           <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
           <span class="lab">Página interna 01</span>
@@ -2365,7 +2302,7 @@
         <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Repertório aplicado — 50+ músicas reais com o padrão ideal</li>
       </ul>
       <div class="produto-image">
-        <img src="assets/ebook-page-02.png" alt="Página interna do e-book — Acordes no teclado" onerror="this.parentElement.classList.add('no-img')"/>
+        <img src="assets/ebook-page-02.png" alt="Página interna do e-book — Acordes no teclado" width="280" height="380" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')"/>
         <div class="img-fallback">
           <svg viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
           <span class="lab">Página interna 02</span>
@@ -2516,15 +2453,15 @@
       </div>
 
       <div class="songs-carousel" id="songsCarousel" tabindex="0" aria-label="Carrossel de músicas">
-        <article class="song-card"><div class="cover"><img src="assets/covers/let-it-be.jpg" alt="Let It Be — Beatles" onerror="this.style.display='none'"/>L</div><div class="info"><div class="title">Let It Be</div><div class="artist">Beatles</div></div></article>
-        <article class="song-card"><div class="cover"><img src="assets/covers/imagine.jpg" alt="Imagine — John Lennon" onerror="this.style.display='none'"/>I</div><div class="info"><div class="title">Imagine</div><div class="artist">John Lennon</div></div></article>
-        <article class="song-card"><div class="cover"><img src="assets/covers/shallow.jpg" alt="Shallow — Lady Gaga" onerror="this.style.display='none'"/>S</div><div class="info"><div class="title">Shallow</div><div class="artist">Lady Gaga</div></div></article>
-        <article class="song-card"><div class="cover"><img src="assets/covers/all-of-me.jpg" alt="All of Me — John Legend" onerror="this.style.display='none'"/>A</div><div class="info"><div class="title">All of Me</div><div class="artist">John Legend</div></div></article>
-        <article class="song-card"><div class="cover"><img src="assets/covers/yellow.jpg" alt="Yellow — Coldplay" onerror="this.style.display='none'"/>Y</div><div class="info"><div class="title">Yellow</div><div class="artist">Coldplay</div></div></article>
-        <article class="song-card"><div class="cover"><img src="assets/covers/clocks.jpg" alt="Clocks — Coldplay" onerror="this.style.display='none'"/>C</div><div class="info"><div class="title">Clocks</div><div class="artist">Coldplay</div></div></article>
-        <article class="song-card"><div class="cover"><img src="assets/covers/someone-like-you.jpg" alt="Someone Like You — Adele" onerror="this.style.display='none'"/>S</div><div class="info"><div class="title">Someone Like You</div><div class="artist">Adele</div></div></article>
-        <article class="song-card"><div class="cover"><img src="assets/covers/skyfall.jpg" alt="Skyfall — Adele" onerror="this.style.display='none'"/>S</div><div class="info"><div class="title">Skyfall</div><div class="artist">Adele</div></div></article>
-        <article class="song-card"><div class="cover"><img src="assets/covers/long-live.jpg" alt="Long Live — Taylor Swift" onerror="this.style.display='none'"/>L</div><div class="info"><div class="title">Long Live</div><div class="artist">Taylor Swift</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/let-it-be.jpg" alt="Let It Be — Beatles" width="200" height="200" loading="lazy" decoding="async" onerror="this.style.display='none'"/>L</div><div class="info"><div class="title">Let It Be</div><div class="artist">Beatles</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/imagine.jpg" alt="Imagine — John Lennon" width="200" height="200" loading="lazy" decoding="async" onerror="this.style.display='none'"/>I</div><div class="info"><div class="title">Imagine</div><div class="artist">John Lennon</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/shallow.jpg" alt="Shallow — Lady Gaga" width="200" height="200" loading="lazy" decoding="async" onerror="this.style.display='none'"/>S</div><div class="info"><div class="title">Shallow</div><div class="artist">Lady Gaga</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/all-of-me.jpg" alt="All of Me — John Legend" width="200" height="200" loading="lazy" decoding="async" onerror="this.style.display='none'"/>A</div><div class="info"><div class="title">All of Me</div><div class="artist">John Legend</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/yellow.jpg" alt="Yellow — Coldplay" width="200" height="200" loading="lazy" decoding="async" onerror="this.style.display='none'"/>Y</div><div class="info"><div class="title">Yellow</div><div class="artist">Coldplay</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/clocks.jpg" alt="Clocks — Coldplay" width="200" height="200" loading="lazy" decoding="async" onerror="this.style.display='none'"/>C</div><div class="info"><div class="title">Clocks</div><div class="artist">Coldplay</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/someone-like-you.jpg" alt="Someone Like You — Adele" width="200" height="200" loading="lazy" decoding="async" onerror="this.style.display='none'"/>S</div><div class="info"><div class="title">Someone Like You</div><div class="artist">Adele</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/skyfall.jpg" alt="Skyfall — Adele" width="200" height="200" loading="lazy" decoding="async" onerror="this.style.display='none'"/>S</div><div class="info"><div class="title">Skyfall</div><div class="artist">Adele</div></div></article>
+        <article class="song-card"><div class="cover"><img src="assets/covers/long-live.jpg" alt="Long Live — Taylor Swift" width="200" height="200" loading="lazy" decoding="async" onerror="this.style.display='none'"/>L</div><div class="info"><div class="title">Long Live</div><div class="artist">Taylor Swift</div></div></article>
         <a class="song-card more" href="#oferta" aria-label="Ver todos os 50 padrões no guia completo">
           <div class="cover">
             <span class="num">+40<small>›</small></span>
@@ -2603,7 +2540,7 @@
       <div class="autora-grid">
         <div class="autora-left">
           <div class="bianca-avatar">
-            <img src="assets/bianca.jpg" alt="Bianca Ribeiro" onerror="this.parentElement.classList.add('no-img')"/>
+            <img src="assets/bianca.jpg" alt="Bianca Ribeiro" width="140" height="140" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')"/>
             <div class="bianca-fallback" aria-hidden="true">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
               <span>Foto da Bianca</span>
@@ -2692,7 +2629,7 @@
 <section class="oferta" id="oferta">
   <div class="oferta-grid">
     <div class="oferta-image fade-up">
-      <img src="assets/oferta-mockup.png" alt="Guia Piano Pop — pacote completo" onerror="this.parentElement.classList.add('no-img')"/>
+      <img src="assets/oferta-mockup.png" alt="Guia Piano Pop — pacote completo" width="500" height="500" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')"/>
       <div class="img-fallback">
         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
         <span class="lab">Mockup do produto</span>
