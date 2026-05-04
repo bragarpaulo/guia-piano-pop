@@ -93,21 +93,6 @@
     });
   };
 
-  // Empacota pares [shortKey, value] em "k1=v1|k2=v2" respeitando limite total (Hotmart: 30ch por param).
-  // Pula vazios e "organico" pra não gastar caracteres. Trunca valor se passar do orçamento restante.
-  function packKVs(pairs, maxLen) {
-    let out = '';
-    for (const [k, v] of pairs) {
-      if (!v || v === 'organico') continue;
-      const sep = out.length ? '|' : '';
-      const room = maxLen - out.length - sep.length - k.length - 1; // 1 = "="
-      if (room <= 0) break;
-      const s = String(v);
-      out += sep + k + '=' + (s.length > room ? s.slice(0, room) : s);
-    }
-    return out;
-  }
-
   function enrichHref(a) {
     try {
       const href = a.getAttribute('href') || '';
@@ -127,23 +112,11 @@
       if (fbc && !url.searchParams.has('_fbc')) url.searchParams.set('_fbc', fbc);
       if (fbp && !url.searchParams.has('_fbp')) url.searchParams.set('_fbp', fbp);
 
-      // 2) src + xcod packed (Hotmart PRESERVA e Stafy webhook decoda):
-      //    src  → tracking.source             → s=source|m=medium|c=campaign       (≤30ch)
-      //    xcod → tracking.external_reference → n=content|t=term|f=fbclid|g=gclid  (≤30ch)
+      // 2) src — TODAS as UTMs concatenadas (Hotmart preserva esse param no webhook
+      //    como tracking.source). Sem limite de tamanho — versão de teste.
       //    sck NÃO é usado aqui (reservado pro time comercial).
-      const src = packKVs([
-        ['s', UTMS.utm_source],
-        ['m', UTMS.utm_medium],
-        ['c', UTMS.utm_campaign],
-      ], 30);
-      const xcod = packKVs([
-        ['n', UTMS.utm_content],
-        ['t', UTMS.utm_term],
-        ['f', CLICK_IDS.fbclid],
-        ['g', CLICK_IDS.gclid],
-      ], 30);
-      if (src && !url.searchParams.has('src')) url.searchParams.set('src', src);
-      if (xcod && !url.searchParams.has('xcod')) url.searchParams.set('xcod', xcod);
+      const src = UTM_KEYS.map((k) => k + '=' + (UTMS[k] || '')).join('|');
+      if (!url.searchParams.has('src')) url.searchParams.set('src', src);
 
       a.setAttribute('href', url.toString());
     } catch (_) {}
