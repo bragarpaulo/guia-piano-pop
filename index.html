@@ -3,6 +3,24 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '842430618938030');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
+
 <title>Guia Piano Pop — Toque suas músicas favoritas com fluidez | Bianca Ribeiro</title>
 <meta name="description" content="50 acompanhamentos prontos + masterclass em vídeo para você tocar suas músicas pop favoritas no piano com leveza, mesmo sem ler partitura. Acesso imediato e vitalício." />
 <meta property="og:title" content="Guia Piano Pop — 50 Acompanhamentos para Tocar a Música Pop" />
@@ -2855,6 +2873,24 @@
       if(e.key === 'ArrowRight'){ e.preventDefault(); carousel.scrollBy({left:step, behavior:'smooth'}); }
       if(e.key === 'ArrowLeft'){ e.preventDefault(); carousel.scrollBy({left:-step, behavior:'smooth'}); }
     });
+  })();
+
+  // === META PIXEL: ViewContent ao atingir 50% de scroll ===
+  (function(){
+    var fired = false;
+    function checkScroll(){
+      if(fired) return;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if(docHeight <= 0) return;
+      var pct = scrollTop / docHeight;
+      if(pct >= 0.5){
+        fired = true;
+        if(typeof fbq !== 'undefined'){ fbq('track', 'ViewContent'); }
+        window.removeEventListener('scroll', checkScroll);
+      }
+    }
+    window.addEventListener('scroll', checkScroll, { passive: true });
   })();
 
   // === FAQ ACCORDION ===
