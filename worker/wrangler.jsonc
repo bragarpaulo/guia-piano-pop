@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "guia-piano-pop-proxy",
+  "main": "src/index.js",
+  "compatibility_date": "2026-05-04",
+  "observability": { "enabled": true },
+  "routes": [
+    {
+      "pattern": "biancaribeiro.art.br/guia-piano-pop",
+      "zone_name": "biancaribeiro.art.br"
+    },
+    {
+      "pattern": "biancaribeiro.art.br/guia-piano-pop/*",
+      "zone_name": "biancaribeiro.art.br"
+    }
+  ]
+}
