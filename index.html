@@ -49,7 +49,8 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
     --maxw:760px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+  img,svg{max-width:100%; height:auto}
+  html{scroll-behavior:smooth; overflow-x:hidden; max-width:100%; width:100%}
   body{
     font-family:'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     color:var(--ink);
@@ -59,6 +60,10 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
     font-weight:400;
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
+    overflow-x:hidden;
+    max-width:100%;
+    width:100%;
+    position:relative;
   }
   h1,h2,h3,h4,.serif{
     font-family:'Cormorant Garamond', Georgia, serif;
@@ -350,20 +355,20 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
   .dor-card.special p strong{color:#2E1E00; font-weight:700}
 
   /* === VIRADA (2 colunas com pílulas) === */
-  .virada{background:var(--bg); padding-bottom:0; overflow:hidden}
+  .virada{background:var(--bg); padding-top:32px; padding-bottom:0; overflow:hidden}
   .virada-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:32px;
-    align-items:end;
+    display:block;
     max-width:1040px;
     margin:0 auto;
     text-align:left;
+    position:relative;
   }
   .virada-content{
     text-align:left;
-    align-self:center;
+    max-width:520px;
     padding-bottom:64px;
+    position:relative;
+    z-index:2;
   }
   .virada-content .eyebrow{
     text-align:left;
@@ -416,18 +421,20 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
   .virada-closer strong{color:var(--ink); font-weight:700}
 
   .virada-image{
-    position:relative;
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
-    align-self:end;
-    min-height:480px;
+    position:absolute;
+    right:-100px;
+    bottom:0;
+    width:auto;
+    height:700px;
+    z-index:1;
+    pointer-events:none;
+    display:block;
   }
   .virada-image img{
-    width:100%; max-width:580px;
-    height:auto;
+    width:auto; max-width:none;
+    height:700px;
     display:block;
-    margin-bottom:0;
+    margin:0;
     border-radius:0;
   }
   .virada-image .img-fallback{
@@ -1803,7 +1810,7 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
   .produto-row{
     display:grid;
     grid-template-columns:0.85fr 1fr;
-    gap:56px;
+    gap:32px;
     align-items:center;
     text-align:left;
     margin:0 auto;
@@ -1875,10 +1882,9 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
     text-align:left;
   }
   .produto-checks li{
-    display:grid;
-    grid-template-columns:24px 1fr;
+    display:flex;
+    align-items:flex-start;
     gap:14px;
-    align-items:start;
     padding:11px 0;
     font-size:16px;
     color:var(--ink);
@@ -2004,8 +2010,9 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
     .virada-closer{text-align:center; max-width:600px; margin-left:auto; margin-right:auto}
     .virada{padding-bottom:0}
     .virada-content{padding-bottom:0}
-    .virada-image{order:-1; min-height:auto; align-self:auto; align-items:center; padding-top:24px}
-    .virada-image img{max-width:380px}
+    .virada-image{position:static; right:auto; bottom:auto; height:auto; margin:0 auto; padding-top:24px; display:flex; justify-content:center}
+    .virada-image img{max-width:380px; width:100%; height:auto}
+    .virada-content{max-width:none; padding-right:0; padding-bottom:32px}
     .autora-card{padding:32px 28px}
     .autora-grid{grid-template-columns:1fr; gap:0}
     .autora-grid::before{display:none}
@@ -2040,8 +2047,8 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
     section{padding:56px 20px}
     .hero{padding:32px 14px 40px}
     .hero-card{padding:32px 22px; border-radius:20px}
-    .hero-bullets{gap:8px}
-    .hero-bullets li{padding:12px; font-size:12.5px; gap:8px}
+    .hero-bullets{grid-template-columns:1fr; gap:8px}
+    .hero-bullets li{padding:14px 16px; font-size:13.5px; gap:10px; min-height:auto}
     .hero-bullets .ico{flex:0 0 24px; width:24px; height:24px}
     .hero-bullets .ico svg{width:12px; height:12px}
     .stack-item{padding:14px 0}
@@ -2141,35 +2148,35 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
         <div class="hero-content">
           <span class="eyebrow fade-up">Guia Piano Pop · Vol. 1</span>
           <h1 class="fade-up">
-            Toque suas <em class="accent">músicas pop favoritas</em> no piano com fluidez — mesmo não sabendo ler cifras
+            Toque suas <em class="accent">músicas pop favoritas</em> no piano sem depender de teoria complicada
           </h1>
           <p class="lede fade-up">
-            <strong>50 acompanhamentos prontos</strong> + masterclass em vídeo para você aprender a ler cifras e aplicar na próxima música. Sem partitura, sem teoria pesada, sem depender de tutoriais soltos.
+            <strong>50 acompanhamentos prontos</strong> e organizados para você aplicar na próxima música que tocar — com vídeo-aula mostrando, de cima, como posicionar sua mão em cada acompanhamento.
           </p>
           <ul class="hero-bullets fade-up">
             <li>
               <span class="ico" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M4 18v-2M10 18v-6M16 18v-10M22 18v-14"/></svg>
               </span>
-              50 padrões organizados por nível
+              Já tentou aprender cifras e travou
             </li>
             <li>
               <span class="ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><polygon points="7 4 20 12 7 20" fill="#FFFFFF" stroke="#FFFFFF"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
               </span>
-              Masterclass demonstrando cada padrão
+              Acha partitura complicada demais
             </li>
             <li>
               <span class="ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M9 17V4l11-2v13"/><circle cx="6" cy="17" r="2.5" fill="#FFFFFF"/><circle cx="17" cy="15" r="2.5" fill="#FFFFFF"/></svg>
+                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
               </span>
-              Beatles, Adele, Coldplay e muito mais
+              Quer tocar músicas conhecidas com segurança
             </li>
             <li>
               <span class="ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/></svg>
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
               </span>
-              Acesso imediato e vitalício
+              Quer um caminho prático, sem enrolação
             </li>
           </ul>
         </div>
@@ -2201,16 +2208,16 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
       <span class="stat-label">Anos<br/>ensinando piano</span>
     </div>
     <div class="stat fade-up">
-      <span class="stat-num">50</span>
-      <span class="stat-label">Padrões de<br/>acompanhamento</span>
+      <span class="stat-num">10k<small>+</small></span>
+      <span class="stat-label">Alunos<br/>atendidos</span>
     </div>
     <div class="stat fade-up">
-      <span class="stat-num">USP</span>
-      <span class="stat-label">Doutorado<br/>em música</span>
+      <span class="stat-num">100<small>%</small></span>
+      <span class="stat-label">Método testado<br/>com adultos</span>
     </div>
     <div class="stat fade-up">
-      <span class="stat-num">7</span>
-      <span class="stat-label">Dias de garantia<br/>incondicional</span>
+      <span class="stat-num">★</span>
+      <span class="stat-label">Especialista em ensino<br/>para principiantes</span>
     </div>
   </div>
 </section>
@@ -2226,21 +2233,21 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
         <span class="ico x" aria-hidden="true">
           <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
         </span>
-        <p>Você toca uma melodia bonita com a mão direita, mas <strong>a esquerda fica parada</strong>, sem saber o que fazer.</p>
+        <p>Sua mão direita toca a melodia, mas <strong>a esquerda trava</strong> — e você não sabe como acompanhar.</p>
       </article>
 
       <article class="dor-card fade-up">
         <span class="ico x" aria-hidden="true">
           <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
         </span>
-        <p>Quando aparece uma cifra, você até sabe o acorde — mas <strong>não sabe COMO tocar</strong> de um jeito que soe como pop de verdade.</p>
+        <p>Você até sabe qual é o acorde… mas <strong>não sabe como tocar</strong> de um jeito que soe pop de verdade.</p>
       </article>
 
       <article class="dor-card fade-up">
         <span class="ico x" aria-hidden="true">
           <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
         </span>
-        <p>Você assiste tutoriais soltos, copia um pedaço, mas <strong>nunca consegue terminar</strong> a música inteira.</p>
+        <p>Você vive <strong>pulando de tutorial em tutorial</strong>… e nunca consegue terminar uma música inteira.</p>
       </article>
 
       <article class="dor-card fade-up">
@@ -2265,7 +2272,7 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
             <circle cx="12" cy="17.8" r="1.3" fill="#FFFFFF"/>
           </svg>
         </span>
-        <p><strong>Você não está sozinho.</strong> E o problema <strong>não é falta de talento.</strong></p>
+        <p><strong>Você não está sozinho.</strong> E o problema não é falta de talento. <strong>É falta de método.</strong></p>
       </article>
     </div>
   </div>
@@ -2276,19 +2283,22 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
   <div class="virada-grid">
     <div class="virada-content">
       <span class="eyebrow fade-up">A virada</span>
-      <h2 class="fade-up">O problema é que ninguém te mostrou os <em>padrões</em></h2>
+      <h2 class="fade-up">O problema <em>nunca foi você</em></h2>
       <p class="intro fade-up">
-        Toda música pop usa um número limitado de padrões — eles se repetem de "Let It Be" a "Shallow", de "Imagine" a "Cold Heart". E quando você os conhece, três coisas acontecem:
+        Foi aprender os acordes soltos, tocando todas as notas ao mesmo tempo, sem entender como transformar tudo em acompanhamento. Toda música pop usa padrões. Mas ninguém te mostrou como aplicar, quando variar e como fazer soar como música de verdade.
+      </p>
+      <p class="intro fade-up" style="margin-top:-12px">
+        Quando você entende como montar um padrão para sua mão esquerda, três coisas acontecem:
       </p>
 
       <ul class="virada-pills">
         <li class="fade-up">Você pega qualquer cifra e <strong>sabe</strong> o que fazer com a mão esquerda</li>
-        <li class="fade-up">Você varia o acompanhamento dentro da mesma música<br/><strong>— refrão diferente da estrofe —</strong></li>
-        <li class="fade-up">Você toca com a sensação de <strong>"está soando como o original"</strong></li>
+        <li class="fade-up">Você varia o acompanhamento dentro da mesma música<br/><strong>— estrofe diferente do refrão —</strong></li>
+        <li class="fade-up">Você toca com a sensação de <strong>"agora está soando como o original"</strong></li>
       </ul>
 
       <p class="virada-closer fade-up">
-        E é exatamente isso que o <strong>Guia Piano Pop</strong> entrega — a virada que transforma cifra em música de verdade.
+        E é exatamente isso que o <strong>Guia Piano Pop</strong> entrega: a lógica por trás do som pop. <strong>Sem partitura complicada. Sem teoria pesada. Sem depender de tutorial solto.</strong> A boa notícia? Você vai perceber que não precisa aprender tudo — muita coisa se repete.
       </p>
     </div>
 
@@ -2307,7 +2317,7 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
 <section class="pullquote">
   <span class="qmark fade-up">&ldquo;</span>
   <p class="big-quote fade-up">
-    Tocar a partir das cifras pode parecer difícil — mas você vai se <em>apaixonar</em> quando começar a experimentar a liberdade de escolher como sua música soa.
+    Tocar a partir das cifras pode parecer difícil — mas você vai se <em>surpreender</em> quando começar a experimentar a liberdade de escolher como sua música soa.
   </p>
   <span class="qby fade-up">
     Bianca Ribeiro
@@ -2318,9 +2328,9 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
 <!-- PRODUTO -->
 <section class="produto">
   <div class="wrap-wide">
-    <span class="eyebrow fade-up">O que tem dentro</span>
-    <h2 class="fade-up">Tudo o que você vai dominar</h2>
-    <p class="lede fade-up">12 frentes de estudo organizadas dos fundamentos aos padrões mais sofisticados — para você aplicar no piano de forma musical, prática e progressiva.</p>
+    <span class="eyebrow fade-up">Resultados</span>
+    <h2 class="fade-up">O que você vai conseguir fazer depois de aplicar esses padrões</h2>
+    <p class="lede fade-up">Um caminho simples e progressivo para você sair do acorde parado e começar a acompanhar músicas de verdade.</p>
 
     <!-- BLOCO 1: imagem à esquerda, checks à direita -->
     <div class="produto-row fade-up">
@@ -2333,12 +2343,12 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
         </div>
       </div>
       <ul class="produto-checks">
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Como ler cifras e identificar acordes em segundos</li>
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Como montar qualquer acorde sem decoreba</li>
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Lead Sheet: achar a partitura certa de qualquer música pop</li>
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Fundamental e quinta — a base sólida do acompanhamento</li>
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>O poder das oitavas para dar peso e emoção</li>
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Padrões com movimento — arpejos que sustentam a melodia</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span><span>Como olhar para uma cifra e <strong>já saber o que fazer no teclado</strong></span></li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span><span>Como montar acordes sem depender de decorar milhares de formatos</span></li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span><span>Como encontrar a versão certa da música para acompanhar com segurança</span></li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span><span>Como fazer sua música <strong>soar completa</strong> já nos primeiros padrões</span></li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span><span>Como trazer <strong>peso e emoção</strong> para sua performance usando o poder das oitavas</span></li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span><span>Como dar movimento à música sem complicar a mão esquerda</span></li>
       </ul>
     </div>
 
@@ -2347,12 +2357,11 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
     <!-- BLOCO 2: checks à esquerda, imagem à direita -->
     <div class="produto-row reverse fade-up">
       <ul class="produto-checks">
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Padrões abertos com a décima — som mais espacial e elegante</li>
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Stride Piano — do ragtime ao pop moderno</li>
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Padrões com peso para climas intensos e emocionais</li>
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Acordes quebrados — harmonia leve, fluida e delicada</li>
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>A síncope pop — o segredo do balanço que faz a cabeça mexer</li>
-        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span>Repertório aplicado — 50+ músicas reais com o padrão ideal</li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span><span><strong>Abrir o som</strong> dos seus acordes para soar mais elegante e profissional</span></li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span><span>Alternar baixo e acorde para dar mais movimento e presença</span></li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span><span>Criar emoção na música sem complicar a mão esquerda</span></li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span><span>Dar aquele <strong>balanço</strong> que faz a música "andar"</span></li>
+        <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="5 12 10 17 19 7"/></svg></span><span>Aplicar cada padrão em músicas que você já conhece</span></li>
       </ul>
       <div class="produto-image">
         <img src="assets/ebook-page-02.png" alt="Página interna do e-book — Acordes no teclado" width="280" height="380" loading="lazy" decoding="async" onerror="this.parentElement.classList.add('no-img')"/>
@@ -2397,8 +2406,8 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
   <span class="deco-note dn2" aria-hidden="true">♫</span>
   <div class="wrap-wide" style="position:relative; z-index:1">
     <span class="sec-eyebrow fade-up">Como funciona, na prática</span>
-    <h2 class="fade-up">Quando você entende a cifra, <em>tudo muda</em></h2>
-    <p class="lede fade-up">Toda cifra esconde apenas 3 notas. Quando você sabe encontrá-las, qualquer música pop fica acessível — e o que parecia complicado vira simples.</p>
+    <h2 class="fade-up">Você não precisa decorar acordes. <em>Só precisa entender a lógica.</em></h2>
+    <p class="lede fade-up">Toda cifra começa com 3 notas organizadas. Quando você enxerga isso no teclado, o que parecia complicado fica acessível.</p>
 
     <div class="kb-stage fade-up">
       <svg viewBox="0 0 480 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Teclado com acorde de Dó maior destacado">
@@ -2473,17 +2482,17 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
       </div>
       <div class="kb-callout">
         <span class="kb-callout-dot">E</span>
-        <span class="kb-callout-text"><strong>Mi</strong>terça maior</span>
+        <span class="kb-callout-text"><strong>Mi</strong>terça</span>
       </div>
       <div class="kb-callout">
         <span class="kb-callout-dot">G</span>
-        <span class="kb-callout-text"><strong>Sol</strong>quinta justa</span>
+        <span class="kb-callout-text"><strong>Sol</strong>quinta</span>
       </div>
     </div>
 
     <p class="kb-conclusion fade-up">
-      É só isso. <strong>Três teclas formam um acorde.</strong><br/>
-      Multiplique por 12 cifras e você toca qualquer música pop.
+      É só isso. <strong>Um desenho que se repete.</strong><br/>
+      Aprenda esse padrão uma vez e você começa a tocar dezenas de músicas.
     </p>
   </div>
 </section>
@@ -2491,9 +2500,9 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
 <!-- REPERTÓRIO -->
 <section class="repertorio">
   <div class="wrap-wide">
-    <span class="eyebrow fade-up">O repertório que você vai poder tocar</span>
-    <h2 class="fade-up">As músicas que você sempre quis tocar — agora ao seu <em>alcance</em></h2>
-    <p class="fade-up">Algumas das músicas trabalhadas como referência dentro do guia. <em>Arraste para o lado</em> ou use as setas:</p>
+    <span class="eyebrow fade-up">Repertório de referência</span>
+    <h2 class="fade-up">As músicas que você ama ficam simples quando você entende os <em>padrões</em></h2>
+    <p class="fade-up">Essas músicas são usadas como referência dentro do guia — para você aplicar os padrões e acompanhar qualquer pop. <em>Arraste para o lado</em> ou use as setas.</p>
 
     <div class="carousel-wrap fade-up">
       <div class="carousel-controls">
@@ -2527,6 +2536,10 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
         </a>
       </div>
     </div>
+
+    <p class="fade-up" style="text-align:center; max-width:680px; margin:36px auto 0; color:#D8D2C7; font-size:14px; line-height:1.55">
+      <strong style="color:#FFFFFF; font-weight:600">Importante:</strong> as músicas acima são usadas como exemplo de aplicação dos padrões de acompanhamento ensinados no guia. Você não está comprando arranjos prontos — está aprendendo a estrutura que permite tocar dezenas de músicas pop.
+    </p>
   </div>
 </section>
 
@@ -2580,7 +2593,25 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
         <p>Quer entender <strong>como escolher as notas certas</strong> pra que o acompanhamento soe como a versão original.</p>
       </article>
 
+      <article class="pq-card fade-up">
+        <div class="pq-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+        </div>
+        <p>Tem <strong>pouco tempo para estudar</strong> e quer algo direto ao ponto.</p>
+      </article>
+
+      <article class="pq-card fade-up">
+        <div class="pq-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <p>Quer <strong>resultado prático e simples</strong> — aplicar e ver acontecer.</p>
+      </article>
+
     </div>
+
+    <p class="fade-up" style="text-align:center; max-width:680px; margin:48px auto 0; font-family:'Cormorant Garamond', serif; font-style:italic; font-size:21px; color:var(--ink); line-height:1.45">
+      Se você já tentou aprender cifras antes e desistiu, isso <strong style="font-style:normal; color:var(--accent); font-weight:600">não significa que você não leva jeito.</strong> Significa que ninguém te mostrou o caminho certo.
+    </p>
   </div>
 </section>
 
@@ -2588,6 +2619,7 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
 <section class="autora">
   <div class="wrap-wide">
     <span class="eyebrow fade-up">Quem te guia</span>
+    <h2 class="fade-up" style="max-width:760px; margin:0 auto 32px; text-align:center">Talvez você não precise de mais teoria.<br/><em>Precise de alguém que já ensinou centenas de adultos a destravar a cifra.</em></h2>
 
     <div class="autora-card fade-up">
       <div class="autora-grid">
@@ -2601,7 +2633,7 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
           </div>
           <h3 class="autora-name">Profa. Dra. Bianca Ribeiro</h3>
           <div class="autora-role">Pianista · Pesquisadora · Educadora</div>
-          <p class="autora-quote">"Meu foco é te ajudar a tocar a partir da cifra, mostrando caminhos alternativos para uma performance musical e prazerosa — desde o início."</p>
+          <p class="autora-quote">"Meu foco é fazer você olhar para uma cifra e saber exatamente o que fazer."</p>
         </div>
 
         <div class="autora-right">
@@ -2618,61 +2650,55 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
   </div>
 </section>
 
-<!-- ANCORAGEM (valor real empilhado) -->
+<!-- ANCORAGEM (comparação aula particular) -->
 <section class="ancoragem">
   <div class="wrap">
-    <span class="eyebrow fade-up">Tudo que está incluso</span>
-    <h2 class="fade-up">O valor real do que você leva</h2>
-    <p class="sub fade-up">Some os itens abaixo e veja quanto este pacote <em>valeria</em> normalmente.</p>
+    <span class="eyebrow fade-up">Compare</span>
+    <h2 class="fade-up">Uma única aula particular de piano custa em média <em>R$ 120 a R$ 350</em></h2>
+    <p class="sub fade-up">Aqui você tem o equivalente a meses de acompanhamento estruturado — em formato prático e direto ao ponto.</p>
 
     <div class="stack fade-up">
+      <p style="font-family:'Cormorant Garamond', serif; font-style:italic; font-size:18px; color:var(--ink-soft); margin:0 0 20px; text-align:left">Se você contratasse:</p>
+
       <div class="stack-item">
         <div class="row">
-          <span class="name-title">Guia Piano Pop em PDF</span>
+          <span class="name-title">Aulas para entender as cifras</span>
           <span class="dots" aria-hidden="true"></span>
-          <span class="price">R$ 197</span>
+          <span class="price">R$ 480</span>
         </div>
-        <small>50 padrões de acompanhamento organizados por nível</small>
+        <small>4 aulas particulares × R$ 120</small>
       </div>
       <div class="stack-item">
         <div class="row">
-          <span class="name-title">Masterclass em vídeo</span>
+          <span class="name-title">Aulas para aprender padrões de acompanhamento</span>
           <span class="dots" aria-hidden="true"></span>
-          <span class="price">R$ 147</span>
+          <span class="price">R$ 720</span>
         </div>
-        <small>Demonstração prática de cada padrão aplicado em músicas reais</small>
+        <small>6 aulas particulares × R$ 120</small>
       </div>
       <div class="stack-item">
         <div class="row">
-          <span class="name-title">Sugestões de repertório pop</span>
+          <span class="name-title">Orientação personalizada em cada padrão</span>
           <span class="dots" aria-hidden="true"></span>
-          <span class="price">R$ 47</span>
+          <span class="price">R$ 240</span>
         </div>
-        <small>Mais de 50 músicas reais com indicação do padrão ideal</small>
+        <small>2 aulas particulares × R$ 120</small>
       </div>
       <div class="stack-item">
         <div class="row">
-          <span class="name-title">Suporte direto via WhatsApp</span>
+          <span class="name-title">Atualizações contínuas do material</span>
           <span class="dots" aria-hidden="true"></span>
-          <span class="price">R$ 67</span>
+          <span class="price">R$ 60</span>
         </div>
-        <small>Tire dúvidas com nossa equipe enquanto estuda</small>
-      </div>
-      <div class="stack-item">
-        <div class="row">
-          <span class="name-title">Atualizações vitalícias</span>
-          <span class="dots" aria-hidden="true"></span>
-          <span class="price">R$ 47</span>
-        </div>
-        <small>Toda nova versão do material entra direto no seu acesso</small>
+        <small>Acesso vitalício a novas versões</small>
       </div>
 
       <div class="stack-total">
         <span class="name-title">
-          Valor total
-          <small>somando os itens acima</small>
+          Você investiria facilmente
+          <small>em aulas particulares</small>
         </span>
-        <span class="price">R$ 505</span>
+        <span class="price">R$ 1.500</span>
       </div>
     </div>
   </div>
@@ -2744,6 +2770,10 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
   <div class="faq-grid">
     <div class="faq-list">
       <div class="faq-item fade-up">
+        <div class="faq-q">O Guia vem com as partituras das músicas?</div>
+        <div class="faq-a"><p>Não. O Guia <strong>não ensina músicas específicas com partitura pronta</strong>. Ele ensina algo mais poderoso: os padrões de acompanhamento que você pode aplicar em qualquer música pop. Você aprende a olhar para uma cifra e saber o que fazer com a mão esquerda — sem depender da partitura.</p></div>
+      </div>
+      <div class="faq-item fade-up">
         <div class="faq-q">O guia é em vídeo ou em PDF?</div>
         <div class="faq-a"><p>Os dois. Você recebe um e-book em PDF com os 50 padrões escritos (escrita tradicional + ilustração no teclado) e uma masterclass em vídeo demonstrando cada padrão aplicado em músicas reais.</p></div>
       </div>
@@ -2793,17 +2823,6 @@ src="https://www.facebook.com/tr?id=842430618938030&ev=PageView&noscript=1"/></n
   </div>
 </section>
 
-<!-- WHATSAPP -->
-<section class="wa">
-  <div class="wrap">
-    <h3 class="fade-up">Ainda com alguma dúvida?</h3>
-    <p class="fade-up">Nossa equipe está disponível para te ajudar antes da compra.</p>
-    <a class="wa-link fade-up" href="https://wa.link/adtgkg" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
-      Falar no WhatsApp
-    </a>
-  </div>
-</section>
 
 <!-- FOOTER -->
 <footer>

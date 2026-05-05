@@ -146,4 +146,28 @@
       }
     } catch (_) {}
   }, true);
+
+  // ViewContent ao atingir 50% de scroll (engajamento real, não bounce)
+  (function () {
+    let fired = false;
+    function checkScroll() {
+      if (fired) return;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+      if (scrollTop / docHeight >= 0.5) {
+        fired = true;
+        try {
+          if (window.fbq) {
+            window.fbq('track', 'ViewContent', Object.assign(
+              { content_name: 'guia-piano-pop', content_category: 'piano-pop-ebook' },
+              UTMS, CLICK_IDS
+            ));
+          }
+        } catch (_) {}
+        window.removeEventListener('scroll', checkScroll);
+      }
+    }
+    window.addEventListener('scroll', checkScroll, { passive: true });
+  })();
 })();
